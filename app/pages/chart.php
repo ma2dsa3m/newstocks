@@ -51,590 +51,198 @@ require "../controller/dashcontroller.php";
 <body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-light m-aside-left--fixed m-aside-left--offcanvas m-aside-left--minimize m-brand--minimize m-footer--push m-aside--offcanvas-default"  >
 <!-- begin:: Page -->
 <div class="m-grid m-grid--hor m-grid--root m-page">
-   <?php require "topbar.php"?>
+    <?php require "topbar.php"?>
     <!-- begin::Body -->
     <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
         <?php require "leftbar.php"?>
         <div class="m-grid__item m-grid__item--fluid m-wrapper">
             <!-- BEGIN: Subheader -->
-            <div class="m-subheader ">
-                <div class="d-flex align-items-center">
-                    <div class="mr-auto">
-                        <h1 class="m-subheader__title m-subheader__title--separator">
 
-                            <?php echo @$amdtitle ?>
-
-                        </h1>
-                        <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
-
-                            <li class="m-nav__item">
-
-                                <a href="" class="m-nav__link" >
-											<span class="m-nav__link-text">
-                                                <h3>
-												<?php echo @$amdticket ?>
-                                                </h3>
-											</span>
-                                </a>
-
-                            </li>
-                            <li class="m-nav__separator">
-                                -
-                            </li>
-
-                            <li class="m-nav__item">
-
-                                <a href="" class="m-nav__link" >
-											<span class="m-nav__link-text" id="display">
-                                     <h3>
-                                         <?php echo @$amdprice ?>
-
-                                     </h3>
-											</span>
-                                </a>
-
-                            </li>
-
-                            <li class="m-nav__separator">
-                                -
-                            </li>
-                            <li class="m-nav__item">
-                                <a href="" class="m-nav__link">
-											<span class="m-nav__link-text" id="display">
-                                                <h5>
-												(<?php echo @$amdchange ?>)
-                                                </h5>
-											</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker"><?php echo $timestamp?>
-									<span class="m-subheader__daterange-label">
-										<span class="m-subheader__daterange-title"></span>
-										<span class="m-subheader__daterange-date m--font-brand"></span>
-									</span>
-									<a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
-										<i class="la la-angle-down"></i>
-									</a>
-								</span>
-                    </div>
-                </div>
-            </div>
             <!-- END: Subheader -->
             <div class="m-content">
                 <!--Begin::Section-->
-                <div class="m-portlet">
-                    <div class="m-portlet__body  m-portlet__body--no-padding">
-                        <div class="row m-row--no-padding m-row--col-separator-xl">
-                            <div class="col-xl-4">
+
+                        <div class="row  m-portlet--full-height ">
+                            <div class="col-xl-8">
                                 <!--begin:: Widgets/Stats2-1 -->
-                                <div class="m-widget1">
-                                    <div class="m-widget1__item">
-                                        <div class="row m-row--no-padding align-items-center">
-                                            <div class="col">
-                                                <h3 class="m-widget1__title">
-                                                   Open/Close Range
-                                                </h3>
-                                                <span class="m-widget1__desc">
-                                                    Awerage Day Price - <?php echo (@$dayopen+@$dayclose)/2?>
-														</span>
-                                            </div>
-                                            <div class="col m--align-right">
-														<span class="m-widget1__number m--font-brand">
-															<?php echo @$dayopen," - ",@$dayclose?>
-														</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="m-widget1__item">
-                                        <div class="row m-row--no-padding align-items-center">
-                                            <div class="col">
-                                                <h3 class="m-widget1__title">
-                                                    Intraday/Before Volume
-                                                </h3>
-                                                <span class="m-widget1__desc">
-															Average
-														</span>
-                                            </div>
-                                            <div class="col m--align-right">
-														<span class="m-widget1__number m--font-info">
-															<?php echo @$indayvol?>
-														</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="m-widget1__item">
-                                        <div class="row m-row--no-padding align-items-center">
-                                            <div class="col">
-                                                <h3 class="m-widget1__title">
-                                                   Investor Sentiment
-                                                </h3>
-                                                <span class="m-widget1__desc">
-															System bugs and issues
-														</span>
-                                            </div>
-                                            <div class="col m--align-right">
-														<span class="m-widget1__number m--font-success">
-															<?php echo @$anrec?>
-														</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="m-widget1__item">
-                                        <div class="row m-row--no-padding align-items-center">
-                                            <div class="col">
-                                                <h3 class="m-widget1__title">
-                                                    Target Price
-                                                </h3>
-                                                <span class="m-widget1__desc">
-															Average
-														</span>
-                                            </div>
-                                            <div class="col m--align-right">
-														<span class="m-widget1__number m--font-success">
-															<?php echo @$target?>
-														</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+
+
+                                        <div id="tradingview_76058" style="height: 80vh"></div>
+
+                                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                        <script type="text/javascript">
+                                            new TradingView.widget(
+                                                {
+                                                    "autosize": true,
+                                                    "symbol": "<?php echo $u?>",
+                                                    "interval": "D",
+                                                    "timezone": "Etc/UTC",
+                                                    "theme": "Light",
+                                                    "style": "1",
+                                                    "locale": "en",
+                                                    "toolbar_bg": "#f1f3f6",
+                                                    "enable_publishing": false,
+                                                    "hide_top_toolbar": true,
+                                                    "allow_symbol_change": true,
+                                                    "hideideas": true,
+                                                    "studies": [
+                                                        "MAExp@tv-basicstudies",
+                                                        "FisherTransform@tv-basicstudies"
+                                                    ],
+
+                                                    "show_popup_button": true,
+                                                    "popup_width": "1000",
+                                                    "popup_height": "650",
+                                                    "container_id": "tradingview_76058"
+                                                }
+                                            );
+                                        </script>
+
+
+
+
                                 <!--end:: Widgets/Stats2-1 -->
                             </div>
                             <div class="col-xl-4">
-                                <!--begin:: Widgets/Revenue Change-->
-                                <div class="m-widget1">
-                                    <div class="m-widget1__item">
-                                        <div class="row m-row--no-padding align-items-center">
-                                            <div class="col">
-                                                <h3 class="m-widget1__title">
-                                                    52 Week Range
-                                                </h3>
-                                                <span class="m-widget1__desc">
-															Price Range
-														</span>
-                                            </div>
-                                            <div class="col m--align-right">
-														<span class="m-widget1__number m--font-brand">
-															<?php echo @$weakrange?>
-														</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="m-widget1__item">
-                                        <div class="row m-row--no-padding align-items-center">
-                                            <div class="col">
-                                                <h3 class="m-widget1__title">
-                                                    Beta
-                                                </h3>
-                                                <span class="m-widget1__desc">
-															Beta Qty
-														</span>
-                                            </div>
-                                            <div class="col m--align-right">
-														<span class="m-widget1__number m--font-info">
-															<?php echo @$beta?>
-														</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="m-widget1__item">
-                                        <div class="row m-row--no-padding align-items-center">
-                                            <div class="col">
-                                                <h3 class="m-widget1__title">
-                                                    Tech Analisis
-                                                </h3>
-                                                <span class="m-widget1__desc">
-                                                Ratings by Technical Analisis
-														</span>
-                                            </div>
-                                            <div class="col m--align-right">
-														<span class="m-widget1__number m--font-success">
-															<?php if(strlen($techrank)<=40){echo @$techrank;}
-															else echo "n/a";?>
-														</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="m-widget1__item">
-                                        <div class="row m-row--no-padding align-items-center">
-                                            <div class="col">
-                                                <h3 class="m-widget1__title">
-                                                    EX-DIVIDEND DATE
-                                                </h3>
-                                                <span class="m-widget1__desc">
-                                                Current Dividents <?php echo @$divident?>
-														</span>
-                                            </div>
-                                            <div class="col m--align-right">
-														<span class="m-widget1__number m--font-success">
-															<?php echo @$dividate?>
-														</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <!--begin:: Widgets/Sales Stats-->
 
-                                </div>
-                                <!--end:: Widgets/Revenue Change-->
+
+                                    <div id="tradingview_462c1" style="height: 40vh"></div>
+
+                                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                    <script type="text/javascript">
+                                        new TradingView.widget(
+                                            {
+                                                "autosize": true,
+                                                "symbol": "<?php echo $u?>",
+                                                "interval": "60",
+                                                "timezone": "Etc/UTC",
+                                                "theme": "Light",
+                                                "style": "1",
+                                                "locale": "en",
+                                                "toolbar_bg": "#f1f3f6",
+                                                "enable_publishing": false,
+                                                "hide_top_toolbar": true,
+                                                "allow_symbol_change": true,
+                                                "hideideas": true,
+                                                "studies": [
+                                                    "MAExp@tv-basicstudies"
+                                                ],
+
+                                                "show_popup_button": true,
+                                                "popup_width": "1000",
+                                                "popup_height": "650",
+                                                "container_id": "tradingview_462c1"
+                                            }
+                                        );
+                                    </script>
+
+                                <div id="tradingview_462c2" style="height: 40vh"></div>
+
+                                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                <script type="text/javascript">
+                                    new TradingView.widget(
+                                        {
+                                            "autosize": true,
+                                            "symbol": "<?php echo $u?>",
+                                            "interval": "5",
+                                            "timezone": "Etc/UTC",
+                                            "theme": "Light",
+                                            "style": "1",
+                                            "locale": "en",
+                                            "toolbar_bg": "#f1f3f6",
+                                            "enable_publishing": false,
+                                            "hide_top_toolbar": true,
+                                            "allow_symbol_change": true,
+                                            "hideideas": true,
+                                            "studies": [
+                                                "MAExp@tv-basicstudies"
+                                            ],
+
+                                            "show_popup_button": true,
+                                            "popup_width": "1000",
+                                            "popup_height": "650",
+                                            "container_id": "tradingview_462c2"
+                                        }
+                                    );
+                                </script>
+
+
+                                <!--end:: Widgets/Sales Stats-->
                             </div>
-                            <div class="col-xl-4">
-                                <!--begin:: Widgets/Profit Share-->
-                                <div class="m-widget14">
-                                    <div class="m-widget14__header">
-                                        <h3 class="m-widget14__title">
-                                            Public Rating
-                                        </h3>
-                                        <span class="m-widget14__desc">
-													Environment, Social and Governance (ESG) Ratings
-												</span>
-                                    </div>
-                                    <div class="row  align-items-center">
-                                        <div class="col">
-                                            <div id="m_chart_profit_share" class="m-widget14__chart" style="height: 160px">
-                                                <div class="m-widget14__stat">
-                                                    <?php echo @$esg?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="m-widget14__legends">
-                                                <div class="m-widget14__legend">
-                                                    <span class="m-widget14__legend-bullet m--bg-accent"></span>
-                                                    <span class="m-widget14__legend-text">
-																<?php echo @$monper?> Invest Month
-															</span>
-                                                </div>
-                                                <div class="m-widget14__legend">
-                                                    <span class="m-widget14__legend-bullet m--bg-warning"></span>
-                                                    <span class="m-widget14__legend-text">
-																<?php echo @$triper?> Invest 3 Month
-															</span>
-                                                </div>
-                                                <div class="m-widget14__legend">
-                                                    <span class="m-widget14__legend-bullet m--bg-brand"></span>
-                                                    <span class="m-widget14__legend-text">
-																<?php echo @$yearper?> Invest Year
-															</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end:: Widgets/Profit Share-->
-                            </div>
+
                         </div>
-                    </div>
-                </div>
+
+
                 <!--End::Section-->
                 <!--Begin::Section-->
-                <div class="row">
-                    <div class="col-xl-6">
-                        <!--begin:: Widgets/Sales Stats-->
-                        <div class="m-portlet m-portlet--full-height ">
-                            <div class="m-portlet__head">
-                                <div class="m-portlet__head-caption">
-                                    <div class="m-portlet__head-title">
-                                        <h3 class="m-portlet__head-text">
-                                            Finance Summary
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="m-portlet__head-tools">
-                                    <ul class="m-portlet__nav">
-                                        <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
-                                            <a href="#" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-secondary m-btn m-btn--label-danger">
-                                               Chart Table
-                                            </a>
-                                            <div class="m-dropdown__wrapper">
-                                                <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 50.203125px;"></span>
-                                                <div class="m-dropdown__inner">
-                                                    <div class="m-dropdown__body">
-                                                        <div class="m-dropdown__content">
-                                                            <ul class="m-nav">
-                                                                <li class="m-nav__section m-nav__section--first">
-																			<span class="m-nav__section-text">
-																				Charting by TradingView
-																			</span>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="chart.php" class="m-nav__link">
-                                                                        <i class="m-nav__link-icon flaticon-share"></i>
-                                                                        <span class="m-nav__link-text">
-																					1d-1h-5m
-																				</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="" class="m-nav__link">
-                                                                        <i class="m-nav__link-icon flaticon-chat-1"></i>
-                                                                        <span class="m-nav__link-text">
-																					1d-1h
-																				</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="" class="m-nav__link">
-                                                                        <i class="m-nav__link-icon flaticon-info"></i>
-                                                                        <span class="m-nav__link-text">
-																					30m
-																				</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="" class="m-nav__link">
-                                                                        <i class="m-nav__link-icon flaticon-lifebuoy"></i>
-                                                                        <span class="m-nav__link-text">
-																					5m
-																				</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__separator m-nav__separator--fit"></li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
-                                                                        Cancel
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="m-portlet__body">
-                                <div class="m-widget12">
-                                    <div class="m-widget12__item">
-												<span class="m-widget12__text1">
-													Market Cap
-													<br>
-													<span>
-														<?php echo @$marketcap?>
-													</span>
-												</span>
-                                        <span class="m-widget12__text2">
-													Earnings Date
-													<br>
-													<span>
-														<?php echo @$earnings?>
-													</span>
-												</span>
-                                    </div>
-                                    <div class="m-widget12__item">
-												<span class="m-widget12__text1">
-													Average Volume
-													<br>
-													<span>
-														<?php echo @$avervol?>
-													</span>
-												</span>
-                                        <span class="m-widget12__text2">
-													Exchange
-													<br>
-													<span>
 
-														<?php echo(@$index[0]['#text'][0])
-														//if(strlen($index[0]['#text'][0]) <= 11){echo($index[0]['#text'][0]);}else echo "n/a"; ?>
-													</span>
-												</span>
-                                    </div>
-                                    <div class="m-widget12__item">
-												<span class="m-widget12__text1">
-													Avarage Product Price
-													
-												</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end:: Widgets/Sales Stats-->
-                    </div>
-                    <div class="col-xl-6">
-                        <!--begin:: Widgets/Inbound Bandwidth-->
-                        <!-- TradingView Widget BEGIN -->
-                        <div class="tradingview-widget-container m-portlet">
-                            <div id="tradingview_76058"  style="height: 45vh"></div>
-
-                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                            <script type="text/javascript">
-                                new TradingView.widget(
-                                    {
-                                        "autosize": true,
-                                        "symbol": "<?php echo $u?>",
-                                        "interval": "D",
-                                        "timezone": "Etc/UTC",
-                                        "theme": "Light",
-                                        "style": "1",
-                                        "locale": "en",
-                                        "toolbar_bg": "#f1f3f6",
-                                        "enable_publishing": false,
-                                        "hide_top_toolbar": true,
-                                        "allow_symbol_change": true,
-                                        "hideideas": true,
-                                        "studies": [
-                                            "MAExp@tv-basicstudies"
-                                        ],
-
-                                        "show_popup_button": true,
-                                        "popup_width": "1000",
-                                        "popup_height": "650",
-                                        "container_id": "tradingview_76058"
-                                    }
-                                );
-                            </script>
-                        </div>
-                        <!-- TradingView Widget END -->
-                        <!--end:: Widgets/Inbound Bandwidth-->
-
-                        <!--begin:: Widgets/Outbound Bandwidth-->
-
-                        <!--end:: Widgets/Outbound Bandwidth-->
-                    </div>
-
-                </div>
                 <!--End::Section-->
                 <!--Begin::Section-->
-                <div class="row">
-                    <div class="col-xl-8">
-                        <?php require "../controller/tickets/bigmoney.php";?>
-                    </div>
-                    <div class="col-xl-4">
-                        <!--begin:: Widgets/Audit Log-->
-                        <div class="m-portlet m-portlet--full-height ">
-                            <div class="m-portlet__head">
-                                <div class="m-portlet__head-caption">
-                                    <div class="m-portlet__head-title">
-                                        <h3 class="m-portlet__head-text">
-                                            Insider
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="m-portlet__head-tools">
-                                    <ul class="nav nav-pills nav-pills--brand m-nav-pills--align-right m-nav-pills--btn-pill m-nav-pills--btn-sm" role="tablist">
-                                        <li class="nav-item m-tabs__item">
-                                            <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_widget4_tab1_content" role="tab">
-                                                3 month
-                                            </a>
-                                        </li>
-                                        <li class="nav-item m-tabs__item">
-                                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab2_content" role="tab">
-                                                6 month
-                                            </a>
-                                        </li>
-                                        <li class="nav-item m-tabs__item">
-                                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab3_content" role="tab">
-                                                1 year
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="m-portlet__body">
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="m_widget4_tab1_content">
-                                        <div class="m-scrollable" data-scrollable="true" data-max-height="200" style="height: 400px; overflow: hidden;">
-                                            <div class="m-list-timeline m-list-timeline--skin-light">
-                                                <div class="m-list-timeline__items">
-                                                    <div class="m-list-timeline__item">
-                                                        <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
-                                                        <span class="m-list-timeline__text">
-																	12 new users registered
-																</span>
-                                                        <span class="m-list-timeline__time">
-																	Just now
-																</span>
-                                                    </div>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="m_widget4_tab2_content"></div>
-                                    <div class="tab-pane" id="m_widget4_tab3_content"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end:: Widgets/Audit Log-->
-                    </div>
-                </div>
                 <!--End::Section-->
                 <!--Begin::Section-->
-                <div class="row">
-                    <div class="col-xl-4">
-                        <!--begin:: Widgets/Support Tickets -->
-                        <?php require "../controller/tickets/news.php"?>
-                        <!--end:: Widgets/Support Tickets -->
-                    </div>
-                    <div class="col-xl-8">
-                        <!--begin:: Widgets/Tasks -->
 
-                       <?php if(!$inside){echo "No Data";}else require "../controller/tickets/inside.php";?>
-                        <!--end:: Widgets/Tasks -->
-                    </div>
-
-                </div>
                 <!--End::Section-->
 
+            </div>
         </div>
     </div>
-</div>
-<!-- end:: Body -->
-<!-- begin::Footer -->
-<footer class="m-grid__item		m-footer ">
-    <div class="m-container m-container--fluid m-container--full-height m-page__container">
-        <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
-            <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+    <!-- end:: Body -->
+    <!-- begin::Footer -->
+    <footer class="m-grid__item		m-footer ">
+        <div class="m-container m-container--fluid m-container--full-height m-page__container">
+            <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+                <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
 							<span class="m-footer__copyright">
 								2018 &copy; Inrutrade by
 								<a href="#" class="m-link">
 									Inrutrade Develop
 								</a>
 							</span>
-            </div>
-            <div class="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first">
-                <ul class="m-footer__nav m-nav m-nav--inline m--pull-right">
-                    <li class="m-nav__item">
-                        <a href="#" class="m-nav__link">
+                </div>
+                <div class="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first">
+                    <ul class="m-footer__nav m-nav m-nav--inline m--pull-right">
+                        <li class="m-nav__item">
+                            <a href="#" class="m-nav__link">
 										<span class="m-nav__link-text">
 											About
 										</span>
-                        </a>
-                    </li>
-                    <li class="m-nav__item">
-                        <a href="#"  class="m-nav__link">
+                            </a>
+                        </li>
+                        <li class="m-nav__item">
+                            <a href="#"  class="m-nav__link">
 										<span class="m-nav__link-text">
 											Privacy
 										</span>
-                        </a>
-                    </li>
-                    <li class="m-nav__item">
-                        <a href="#" class="m-nav__link">
+                            </a>
+                        </li>
+                        <li class="m-nav__item">
+                            <a href="#" class="m-nav__link">
 										<span class="m-nav__link-text">
 											T&C
 										</span>
-                        </a>
-                    </li>
-                    <li class="m-nav__item">
-                        <a href="#" class="m-nav__link">
+                            </a>
+                        </li>
+                        <li class="m-nav__item">
+                            <a href="#" class="m-nav__link">
 										<span class="m-nav__link-text">
 											Purchase
 										</span>
-                        </a>
-                    </li>
-                    <li class="m-nav__item m-nav__item">
-                        <a href="#" class="m-nav__link" data-toggle="m-tooltip" title="Support Center" data-placement="left">
-                            <i class="m-nav__link-icon flaticon-technology-1 m--icon-font-size-lg3"></i>
-                        </a>
-                    </li>
-                </ul>
+                            </a>
+                        </li>
+                        <li class="m-nav__item m-nav__item">
+                            <a href="#" class="m-nav__link" data-toggle="m-tooltip" title="Support Center" data-placement="left">
+                                <i class="m-nav__link-icon flaticon-technology-1 m--icon-font-size-lg3"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- end::Footer -->
+    </footer>
+    <!-- end::Footer -->
 </div>
 <!-- end:: Page -->
 <!-- begin::Quick Sidebar -->
@@ -980,7 +588,6 @@ require "../controller/dashcontroller.php";
                     </div>
                 </div>
             </div>
-
             <div class="tab-pane  m-scrollable" id="m_quick_sidebar_tabs_logs" role="tabpanel">
                 <div class="m-list-timeline">
                     <div class="m-list-timeline__group">
@@ -999,8 +606,8 @@ require "../controller/dashcontroller.php";
                                 </a>
                                 <span class="m-list-timeline__time">
                                     <?php
-											echo($techprice[0]['#text'][0]);
-											?>
+                                    echo($techprice[0]['#text'][0]);
+                                    ?>
 										</span>
                             </div>
 
@@ -1316,7 +923,6 @@ require "../controller/dashcontroller.php";
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
