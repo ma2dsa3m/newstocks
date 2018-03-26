@@ -157,4 +157,8 @@ $bigmoney = ($in->get('.fullview-ratings-inner .body-table-rating-neutral > td')
 
 #news
 $news = ($in->get('#news-table td')->toArray());
+
+#inside
+@$inside = ($in->get('.insider-sale-row-2 > td')->toArray());
+if(@$inside[0]['a'][0]['#text'][0]===0){@$inside = ($in->get('tr.insider-option-row')->toArray());};
 ?>
