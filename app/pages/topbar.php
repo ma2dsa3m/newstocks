@@ -749,7 +749,7 @@
 												<i class="flaticon-search"></i>
 											</span>
                                 <span class="m-header-search__input-wrapper">
-												<input autocomplete="on" type="text" name="ticket" class="m-header-search__input" value="<?php echo strtolower($amdticket)?>" placeholder="Search..." id="m_quicksearch_input">
+												<input autocomplete="on" type="text" name="ticket" class="m-header-search__input" value="<?php echo strtolower($amdticket)?>" placeholder="Search..." id="m_quicksearch_input" autofocus>
 											</span>
                                 <span class="m-header-search__icon-close" id="m_quicksearch_close">
 												<i class="la la-remove"></i>

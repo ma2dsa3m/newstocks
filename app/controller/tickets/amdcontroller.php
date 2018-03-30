@@ -161,4 +161,13 @@ $news = ($in->get('#news-table td')->toArray());
 #inside
 @$inside = ($in->get('.insider-sale-row-2 > td')->toArray());
 if(@$inside[0]['a'][0]['#text'][0]===0){@$inside = ($in->get('tr.insider-option-row')->toArray());};
+
+#inside
+@$inside = ($in->get('.insider-sale-row-2 > td')->toArray());
+
+#signal
+$si = file_get_contents("https://finviz.com");
+$sin = new nokogiri($si);
+$signal = ($sin->get('.t-home-table td')->toArray());
+
 ?>

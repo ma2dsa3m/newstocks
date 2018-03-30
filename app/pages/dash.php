@@ -18,7 +18,6 @@ require "../controller/dashcontroller.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--begin::Web font -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
     <script>
         WebFont.load({
@@ -28,14 +27,7 @@ require "../controller/dashcontroller.php";
             }
         });
     </script>
-    <script type="text/javascript">
-        var auto_refresh = setInterval(
-            function ()
-            {
-                $('#display').load('../controller/tickets/update.php?q=<?php echo $amdprice; ?>').fadeIn("slow");
-            }, 10000); // refresh every 10000 milliseconds
 
-    </script>
     <!--end::Web font -->
     <!--begin::Base Styles -->
     <!--begin::Page Vendors -->
@@ -358,43 +350,17 @@ require "../controller/dashcontroller.php";
 																			</span>
                                                                 </li>
                                                                 <li class="m-nav__item">
-                                                                    <a href="chart.php" class="m-nav__link">
+                                                                    <a href="chart.php?ticket=<?php echo @$amdticket?>" class="m-nav__link">
                                                                         <i class="m-nav__link-icon flaticon-share"></i>
                                                                         <span class="m-nav__link-text">
 																					1d-1h-5m
 																				</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="" class="m-nav__link">
-                                                                        <i class="m-nav__link-icon flaticon-chat-1"></i>
-                                                                        <span class="m-nav__link-text">
-																					1d-1h
-																				</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="" class="m-nav__link">
-                                                                        <i class="m-nav__link-icon flaticon-info"></i>
-                                                                        <span class="m-nav__link-text">
-																					30m
-																				</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="" class="m-nav__link">
-                                                                        <i class="m-nav__link-icon flaticon-lifebuoy"></i>
-                                                                        <span class="m-nav__link-text">
-																					5m
-																				</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="m-nav__separator m-nav__separator--fit"></li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
-                                                                        Cancel
-                                                                    </a>
-                                                                </li>
+
+                                                                <button type="button" class="btn btn-success" data-container="body" data-toggle="m-popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+                                                                    Popover on left
+                                                                </button>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -571,7 +537,21 @@ require "../controller/dashcontroller.php";
                     <div class="col-xl-8">
                         <!--begin:: Widgets/Tasks -->
 
-                       <?php if(!$inside){echo "No Data";}else require "../controller/tickets/inside.php";?>
+                       <?php if(!$inside){echo '<div class="m-alert m-alert--icon m-alert--icon-solid m-alert--outline alert alert-danger alert-dismissible fade show" role="alert">
+											<div class="m-alert__icon">
+												<i class="flaticon-exclamation-1"></i>
+												<span></span>
+											</div>
+											<div class="m-alert__text">
+												<strong>
+													No Insider Data To Show
+												</strong>
+												
+											</div>
+											<div class="m-alert__close">
+												<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+											</div>
+										</div>';}else require "../controller/tickets/inside.php";?>
                         <!--end:: Widgets/Tasks -->
                     </div>
 
