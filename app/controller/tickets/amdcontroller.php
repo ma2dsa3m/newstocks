@@ -115,38 +115,6 @@ $divident = preg_replace($paterns, '', $divident);
 $earnings = parce($tiprank,'<sup class="spl_sup_text"></sup>','</td>');
 $earnings = preg_replace($paterns, '', $earnings);
 
-#techtable
-//$techtable = parce($tech,'<td style="text-align: left;">','</td>');
-//$techtable = preg_replace($paterns, '', $techtable);
-
-#techanalisis
-$html = $tech;
-$saw = new nokogiri($html);
-$techtable = ($saw->get('tr td a')->toArray());
-$techprice = ($saw->get('td span')->toArray());
-//$techtable = preg_replace($paterns, '', $techtable);
-
-
-$cros = file_get_contents("https://www.stockmonitor.com/stock-screener/death-cross-50ma-cross-down-200ma/");
-$descros = new nokogiri($cros);
-$downcross = ($descros->get('tr td a')->toArray());
-$downprice = ($descros->get('td span')->toArray());
-
-
-#oversold
-$ov = file_get_contents("https://www.stockmonitor.com/stock-screener/oversold-momentum-rising/");
-$momov = new nokogiri($ov);
-$oversold = ($momov->get('tr td a')->toArray());
-$oversprice = ($momov->get('td span')->toArray());
-
-
-#oversold
-$ovb = file_get_contents("https://www.stockmonitor.com/stock-screener/overbought-momentum-falling/");
-$momovb = new nokogiri($ovb);
-$overboug = ($momovb->get('tr td a')->toArray());
-$overbprice = ($momovb->get('td span')->toArray());
-
-
 #index
 $i = file_get_contents("https://finviz.com/quote.ashx?t=$u&ty=c&ta=1&p=d");
 $in = new nokogiri($i);
@@ -168,6 +136,11 @@ if(@$inside[0]['a'][0]['#text'][0]===0){@$inside = ($in->get('tr.insider-option-
 #signal
 $si = file_get_contents("https://finviz.com");
 $sin = new nokogiri($si);
-$signal = ($sin->get('.t-home-table td')->toArray());
+$signal = ($sin->get('table.t-home-table')->toArray());
+
+#signal2
+$siq = file_get_contents("https://finviz.com/screener.ashx?v=110&s=ta_p_tlsupport");
+$sinq = new nokogiri($siq);
+$signalq = ($sinq->get('#screener-content td')->toArray());
 
 ?>

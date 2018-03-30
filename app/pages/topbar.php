@@ -188,7 +188,7 @@
                             <a  href="#" class="m-menu__link m-menu__toggle">
                                 <span class="m-menu__item-here"></span>
                                 <span class="m-menu__link-text">
-												Reports
+												Signal Reports
 											</span>
                                 <i class="m-menu__hor-arrow la la-angle-down"></i>
                                 <i class="m-menu__ver-arrow la la-angle-right"></i>
@@ -200,123 +200,146 @@
                                         <li class="m-menu__item">
                                             <h3 class="m-menu__heading m-menu__toggle">
 															<span class="m-menu__link-text">
-																Finance Reports
+																TD Support
 															</span>
                                                 <i class="m-menu__ver-arrow la la-angle-right"></i>
                                             </h3>
                                             <ul class="m-menu__inner">
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-map"></i>
-                                                        <span class="m-menu__link-text">
-																		Annual Reports
+                                                <?php
+                                                $i = [0,1,2,3,];
+                                                foreach ($i as $io){
+                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
+    <a  href="dash.php?ticket=',$signal[2]["tr"][1] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
+        <i class="m-menu__link-icon flaticon-map"></i>
+        <span class="m-menu__link-text">
+																		',$signal[2]["tr"][1] ["td"][$io]["a"][0]["#text"][0],'
 																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-user"></i>
-                                                        <span class="m-menu__link-text">
-																		HR Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-clipboard"></i>
-                                                        <span class="m-menu__link-text">
-																		IPO Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-graphic-1"></i>
-                                                        <span class="m-menu__link-text">
-																		Finance Margins
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-graphic-2"></i>
-                                                        <span class="m-menu__link-text">
-																		Revenue Reports
-																	</span>
-                                                    </a>
-                                                </li>
+    </a>
+</li>';
+
+
+
+
+                                                };
+                                                ?>
+
                                             </ul>
                                         </li>
                                         <li class="m-menu__item">
                                             <h3 class="m-menu__heading m-menu__toggle">
 															<span class="m-menu__link-text">
-																Project Reports
+																Channel Up
 															</span>
                                                 <i class="m-menu__ver-arrow la la-angle-right"></i>
                                             </h3>
                                             <ul class="m-menu__inner">
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Coca Cola CRM
+                                                <?php
+                                                $i = [0,1,2,3,];
+                                                foreach ($i as $io){
+                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
+    <a  href="dash.php?ticket=',$signal[3]["tr"][1] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
+        <i class="m-menu__link-icon flaticon-map"></i>
+        <span class="m-menu__link-text">
+																		',$signal[3]["tr"][1] ["td"][$io]["a"][0]["#text"][0],'
 																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Delta Airlines Booking Site
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Malibu Accounting
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Vineseed Website Rewamp
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Zircon Mobile App
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Mercury CMS
-																	</span>
-                                                    </a>
-                                                </li>
+    </a>
+</li>';
+
+
+
+
+                                                };
+                                                ?>
                                             </ul>
                                         </li>
+
+                                        <li class="m-menu__item">
+                                            <h3 class="m-menu__heading m-menu__toggle">
+															<span class="m-menu__link-text">
+																TD Resistance
+															</span>
+                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                            </h3>
+                                            <ul class="m-menu__inner">
+                                                <?php
+                                                $i = [0,1,2,3,];
+                                                foreach ($i as $io){
+                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
+    <a  href="dash.php?ticket=',$signal[2]["tr"][2] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
+        <i class="m-menu__link-icon flaticon-map"></i>
+        <span class="m-menu__link-text">
+																		',$signal[2]["tr"][2] ["td"][$io]["a"][0]["#text"][0],'
+																	</span>
+    </a>
+</li>';
+
+
+
+
+                                                };
+                                                ?>
+
+                                            </ul>
+                                        </li>
+
+                                        <li class="m-menu__item">
+                                            <h3 class="m-menu__heading m-menu__toggle">
+															<span class="m-menu__link-text">
+																Chanel
+															</span>
+                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                            </h3>
+                                            <ul class="m-menu__inner">
+                                                <?php
+                                                $i = [0,1,2,3,];
+                                                foreach ($i as $io){
+                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
+    <a  href="dash.php?ticket=',$signal[3]["tr"][2] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
+        <i class="m-menu__link-icon flaticon-map"></i>
+        <span class="m-menu__link-text">
+																		',$signal[3]["tr"][2] ["td"][$io]["a"][0]["#text"][0],'
+																	</span>
+    </a>
+</li>';
+
+
+
+
+                                                };
+                                                ?>
+
+                                            </ul>
+                                        </li>
+
+                                        <li class="m-menu__item">
+                                            <h3 class="m-menu__heading m-menu__toggle">
+															<span class="m-menu__link-text">
+																Horizontal S/R
+															</span>
+                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                            </h3>
+                                            <ul class="m-menu__inner">
+                                                <?php
+                                                $i = [0,1,2,3,];
+                                                foreach ($i as $io){
+                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
+    <a  href="dash.php?ticket=',$signal[2]["tr"][3] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
+        <i class="m-menu__link-icon flaticon-map"></i>
+        <span class="m-menu__link-text">
+																		',$signal[2]["tr"][3] ["td"][$io]["a"][0]["#text"][0],'
+																	</span>
+    </a>
+</li>';
+
+
+
+
+                                                };
+                                                ?>
+
+                                            </ul>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
