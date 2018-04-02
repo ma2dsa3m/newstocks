@@ -1,4 +1,3 @@
-
 <?php //if (!isset($_SESSION['logged user'])){header('Location:login.php');};
 require "../controller/dashcontroller.php";
 
@@ -53,8 +52,7 @@ require "../controller/dashcontroller.php";
                 <div class="d-flex align-items-center">
                     <div class="mr-auto">
                         <h1 class="m-subheader__title m-subheader__title--separator">
-
-                            <?php echo @$amdtitle ?>
+                            <?php echo @$title?>
 
                         </h1>
                         <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
@@ -64,7 +62,7 @@ require "../controller/dashcontroller.php";
                                 <a href="" class="m-nav__link" >
 											<span class="m-nav__link-text">
                                                 <h3>
-												<?php echo @$amdticket ?>
+												<?php echo @$ticker ?>
                                                 </h3>
 											</span>
                                 </a>
@@ -79,7 +77,7 @@ require "../controller/dashcontroller.php";
                                 <a href="" class="m-nav__link" >
 											<span class="m-nav__link-text" id="display">
                                      <h3>
-                                         <?php echo @$amdprice ?>
+                                         <?php echo @$price ?>
 
                                      </h3>
 											</span>
@@ -94,7 +92,7 @@ require "../controller/dashcontroller.php";
                                 <a href="" class="m-nav__link">
 											<span class="m-nav__link-text" id="display">
                                                 <h5>
-												(<?php echo @$amdchange ?>)
+												(<?php echo @$change ?>)
                                                 </h5>
 											</span>
                                 </a>
@@ -102,7 +100,7 @@ require "../controller/dashcontroller.php";
                         </ul>
                     </div>
                     <div>
-								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker"><?php echo $timestamp?>
+								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker"><?php echo @$compprof?>
 									<span class="m-subheader__daterange-label">
 										<span class="m-subheader__daterange-title"></span>
 										<span class="m-subheader__daterange-date m--font-brand"></span>
@@ -127,15 +125,15 @@ require "../controller/dashcontroller.php";
                                         <div class="row m-row--no-padding align-items-center">
                                             <div class="col">
                                                 <h3 class="m-widget1__title">
-                                                   Open/Close Range
+                                                   Volatility
                                                 </h3>
                                                 <span class="m-widget1__desc">
-                                                    Awerage Day Price - <?php echo (@$dayopen+@$dayclose)/2?>
+                                                    Price To Earnings - <?php echo @$pe?>
 														</span>
                                             </div>
                                             <div class="col m--align-right">
 														<span class="m-widget1__number m--font-brand">
-															<?php echo @$dayopen," - ",@$dayclose?>
+															<?php echo @$volatility?>
 														</span>
                                             </div>
                                         </div>
@@ -144,7 +142,7 @@ require "../controller/dashcontroller.php";
                                         <div class="row m-row--no-padding align-items-center">
                                             <div class="col">
                                                 <h3 class="m-widget1__title">
-                                                    Intraday/Before Volume
+                                                    Return on Investment
                                                 </h3>
                                                 <span class="m-widget1__desc">
 															Average
@@ -152,7 +150,9 @@ require "../controller/dashcontroller.php";
                                             </div>
                                             <div class="col m--align-right">
 														<span class="m-widget1__number m--font-info">
-															<?php echo @$indayvol?>
+															<?php 
+                                                                if(!@$roi){echo "n/a";} else echo @$roi;
+                                                            ?>
 														</span>
                                             </div>
                                         </div>
@@ -161,15 +161,15 @@ require "../controller/dashcontroller.php";
                                         <div class="row m-row--no-padding align-items-center">
                                             <div class="col">
                                                 <h3 class="m-widget1__title">
-                                                   Investor Sentiment
+                                                   BPS
                                                 </h3>
                                                 <span class="m-widget1__desc">
-															System bugs and issues
+															Book value Book/sh BPS
 														</span>
                                             </div>
                                             <div class="col m--align-right">
 														<span class="m-widget1__number m--font-success">
-															<?php echo @$anrec?>
+															<?php echo @$bps?>
 														</span>
                                             </div>
                                         </div>
@@ -186,7 +186,9 @@ require "../controller/dashcontroller.php";
                                             </div>
                                             <div class="col m--align-right">
 														<span class="m-widget1__number m--font-success">
-															<?php echo @$target?>
+															<?php 
+                                                                    if(!@$targetprice){echo "n/a";} else echo @$targetprice;
+                                                            ?>
 														</span>
                                             </div>
                                         </div>
@@ -209,7 +211,7 @@ require "../controller/dashcontroller.php";
                                             </div>
                                             <div class="col m--align-right">
 														<span class="m-widget1__number m--font-brand">
-															<?php echo @$weakrange?>
+															<?php echo @$weak?>
 														</span>
                                             </div>
                                         </div>
@@ -243,8 +245,8 @@ require "../controller/dashcontroller.php";
                                             </div>
                                             <div class="col m--align-right">
 														<span class="m-widget1__number m--font-success">
-															<?php if(strlen($techrank)<=40){echo @$techrank;}
-															else echo "n/a";?>
+															<?php if((@$sma50 - @$sma20)>=@$sma200){echo "Sell";}
+															else echo "Buy";?>
 														</span>
                                             </div>
                                         </div>
@@ -253,7 +255,7 @@ require "../controller/dashcontroller.php";
                                         <div class="row m-row--no-padding align-items-center">
                                             <div class="col">
                                                 <h3 class="m-widget1__title">
-                                                    EX-DIVIDEND DATE
+                                                    EARNINGS PER SHARE Y
                                                 </h3>
                                                 <span class="m-widget1__desc">
                                                 Current Dividents <?php echo @$divident?>
@@ -261,7 +263,7 @@ require "../controller/dashcontroller.php";
                                             </div>
                                             <div class="col m--align-right">
 														<span class="m-widget1__number m--font-success">
-															<?php echo @$dividate?>
+															<?php  echo @$epsyear?>
 														</span>
                                             </div>
                                         </div>
@@ -275,17 +277,24 @@ require "../controller/dashcontroller.php";
                                 <div class="m-widget14">
                                     <div class="m-widget14__header">
                                         <h3 class="m-widget14__title">
-                                            Public Rating
+                                            Investor Sentiment
                                         </h3>
                                         <span class="m-widget14__desc">
-													Environment, Social and Governance (ESG) Ratings
+													Total Rating
 												</span>
                                     </div>
                                     <div class="row  align-items-center">
                                         <div class="col">
                                             <div id="m_chart_profit_share" class="m-widget14__chart" style="height: 160px">
                                                 <div class="m-widget14__stat">
-                                                    <?php echo @$esg?>
+                                                    <?php if (@$recomend == "-") {
+                                                                           echo "n/a";
+                                                                        }elseif(@$recomend<2.2){echo "Buy";} 
+                                                                elseif (@$recomend>=2.2 && @$recomend<=3) {
+                                                                echo "Hold";
+                                                                } elseif (@$recomend>3 && @$recomend<=5) {
+                                                                          echo "Sell";
+                                                                        };?>
                                                 </div>
                                             </div>
                                         </div>
@@ -294,19 +303,19 @@ require "../controller/dashcontroller.php";
                                                 <div class="m-widget14__legend">
                                                     <span class="m-widget14__legend-bullet m--bg-accent"></span>
                                                     <span class="m-widget14__legend-text">
-																<?php echo @$monper?> Invest Month
+																<?php echo @$inmonth?> Invest Month
 															</span>
                                                 </div>
                                                 <div class="m-widget14__legend">
                                                     <span class="m-widget14__legend-bullet m--bg-warning"></span>
                                                     <span class="m-widget14__legend-text">
-																<?php echo @$triper?> Invest 3 Month
+																<?php echo @$inquarter?> Invest 3 Month
 															</span>
                                                 </div>
                                                 <div class="m-widget14__legend">
                                                     <span class="m-widget14__legend-bullet m--bg-brand"></span>
                                                     <span class="m-widget14__legend-text">
-																<?php echo @$yearper?> Invest Year
+																<?php echo @$inyear?> Invest Year
 															</span>
                                                 </div>
                                             </div>
@@ -350,7 +359,7 @@ require "../controller/dashcontroller.php";
 																			</span>
                                                                 </li>
                                                                 <li class="m-nav__item">
-                                                                    <a href="chart.php?ticket=<?php echo @$amdticket?>" class="m-nav__link">
+                                                                    <a href="chart.php?ticket=<?php echo @$ticker?>" class="m-nav__link">
                                                                         <i class="m-nav__link-icon flaticon-share"></i>
                                                                         <span class="m-nav__link-text">
 																					1d-1h-5m
@@ -390,7 +399,7 @@ require "../controller/dashcontroller.php";
                                     </div>
                                     <div class="m-widget12__item">
 												<span class="m-widget12__text1">
-													Average Volume
+													Volume
 													<br>
 													<span>
 														<?php echo @$avervol?>
@@ -408,7 +417,7 @@ require "../controller/dashcontroller.php";
                                     </div>
                                     <div class="m-widget12__item">
 												<span class="m-widget12__text1">
-													Avarage Product Price
+													Total Debt to Equity - <?php echo @$debt?>
 													
 												</span>
 
@@ -470,58 +479,32 @@ require "../controller/dashcontroller.php";
                     <div class="col-xl-4">
                         <!--begin:: Widgets/Audit Log-->
                         <div class="m-portlet m-portlet--full-height ">
-                            <div class="m-portlet__head">
-                                <div class="m-portlet__head-caption">
-                                    <div class="m-portlet__head-title">
-                                        <h3 class="m-portlet__head-text">
-                                            Insider
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="m-portlet__head-tools">
-                                    <ul class="nav nav-pills nav-pills--brand m-nav-pills--align-right m-nav-pills--btn-pill m-nav-pills--btn-sm" role="tablist">
-                                        <li class="nav-item m-tabs__item">
-                                            <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_widget4_tab1_content" role="tab">
-                                                3 month
-                                            </a>
-                                        </li>
-                                        <li class="nav-item m-tabs__item">
-                                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab2_content" role="tab">
-                                                6 month
-                                            </a>
-                                        </li>
-                                        <li class="nav-item m-tabs__item">
-                                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab3_content" role="tab">
-                                                1 year
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="m-portlet__body">
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="m_widget4_tab1_content">
-                                        <div class="m-scrollable" data-scrollable="true" data-max-height="200" style="height: 400px; overflow: hidden;">
-                                            <div class="m-list-timeline m-list-timeline--skin-light">
-                                                <div class="m-list-timeline__items">
-                                                    <div class="m-list-timeline__item">
-                                                        <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
-                                                        <span class="m-list-timeline__text">
-																	12 new users registered
-																</span>
-                                                        <span class="m-list-timeline__time">
-																	Just now
-																</span>
-                                                    </div>
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container" >
+                                <div id="tradingview_f6710" style="height: 40vh"></div>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="m_widget4_tab2_content"></div>
-                                    <div class="tab-pane" id="m_widget4_tab3_content"></div>
-                                </div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                <script type="text/javascript">
+                                    new TradingView.widget(
+                                        {
+                                            "autosize": true,
+                                            "symbol": "<?php echo @$ticker?>",
+                                            "interval": "D",
+                                            "theme": "Light",
+                                            "locale": "en",
+                                            "toolbar_bg": "#f1f3f6",
+                                            "fundamental": "Script$EDGR_DIVIDEND_YIELD_V2@tv-scripting",
+                                            "percentage": true,
+                                            "hide_top_toolbar": true,
+                                            "hide_side_toolbar": true,
+                                            "allow_symbol_change": true,
+                                            "save_image": false,
+                                            "container_id": "tradingview_f6710"
+                                        }
+                                    );
+                                </script>
                             </div>
+                            <!-- TradingView Widget END -->
                         </div>
                         <!--end:: Widgets/Audit Log-->
                     </div>
@@ -618,688 +601,7 @@ require "../controller/dashcontroller.php";
 </div>
 <!-- end:: Page -->
 <!-- begin::Quick Sidebar -->
-<div id="m_quick_sidebar" class="m-quick-sidebar m-quick-sidebar--tabbed m-quick-sidebar--skin-light">
-    <div class="m-quick-sidebar__content m--hide">
-				<span id="m_quick_sidebar_close" class="m-quick-sidebar__close">
-					<i class="la la-close"></i>
-				</span>
-        <ul id="m_quick_sidebar_tabs" class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--brand" role="tablist">
-            <li class="nav-item m-tabs__item">
-                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_quick_sidebar_tabs_messenger" role="tab">
-                    Messages
-                </a>
-            </li>
-            <li class="nav-item m-tabs__item">
-                <a class="nav-link m-tabs__link" 		data-toggle="tab" href="#m_quick_sidebar_tabs_settings" role="tab">
-                    Settings
-                </a>
-            </li>
-            <li class="nav-item m-tabs__item">
-                <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_quick_sidebar_tabs_logs" role="tab">
-                    Technical Analisis
-                </a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane active m-scrollable" id="m_quick_sidebar_tabs_messenger" role="tabpanel">
-                <div class="m-messenger m-messenger--message-arrow m-messenger--skin-light">
-                    <div class="m-messenger__messages">
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--in">
-                                <div class="m-messenger__message-pic">
-                                    <img src="assets/app/media/img//users/user3.jpg" alt=""/>
-                                </div>
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-username">
-                                            Megan wrote
-                                        </div>
-                                        <div class="m-messenger__message-text">
-                                            Hi Bob. What time will be the meeting ?
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--out">
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-text">
-                                            Hi Megan. It's at 2.30PM
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--in">
-                                <div class="m-messenger__message-pic">
-                                    <img src="assets/app/media/img//users/user3.jpg" alt=""/>
-                                </div>
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-username">
-                                            Megan wrote
-                                        </div>
-                                        <div class="m-messenger__message-text">
-                                            Will the development team be joining ?
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--out">
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-text">
-                                            Yes sure. I invited them as well
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__datetime">
-                            2:30PM
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--in">
-                                <div class="m-messenger__message-pic">
-                                    <img src="assets/app/media/img//users/user3.jpg"  alt=""/>
-                                </div>
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-username">
-                                            Megan wrote
-                                        </div>
-                                        <div class="m-messenger__message-text">
-                                            Noted. For the Coca-Cola Mobile App project as well ?
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--out">
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-text">
-                                            Yes, sure.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--out">
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-text">
-                                            Please also prepare the quotation for the Loop CRM project as well.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__datetime">
-                            3:15PM
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--in">
-                                <div class="m-messenger__message-no-pic m--bg-fill-danger">
-											<span>
-												M
-											</span>
-                                </div>
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-username">
-                                            Megan wrote
-                                        </div>
-                                        <div class="m-messenger__message-text">
-                                            Noted. I will prepare it.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--out">
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-text">
-                                            Thanks Megan. I will see you later.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="m-messenger__wrapper">
-                            <div class="m-messenger__message m-messenger__message--in">
-                                <div class="m-messenger__message-pic">
-                                    <img src="assets/app/media/img//users/user3.jpg"  alt=""/>
-                                </div>
-                                <div class="m-messenger__message-body">
-                                    <div class="m-messenger__message-arrow"></div>
-                                    <div class="m-messenger__message-content">
-                                        <div class="m-messenger__message-username">
-                                            Megan wrote
-                                        </div>
-                                        <div class="m-messenger__message-text">
-                                            Sure. See you in the meeting soon.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-messenger__seperator"></div>
-                    <div class="m-messenger__form">
-                        <div class="m-messenger__form-controls">
-                            <input type="text" name="" placeholder="Type here..." class="m-messenger__form-input">
-                        </div>
-                        <div class="m-messenger__form-tools">
-                            <a href="" class="m-messenger__form-attachment">
-                                <i class="la la-paperclip"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane  m-scrollable" id="m_quick_sidebar_tabs_settings" role="tabpanel">
-                <div class="m-list-settings">
-                    <div class="m-list-settings__group">
-                        <div class="m-list-settings__heading">
-                            General Settings
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										Email Notifications
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" checked="checked" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										Site Tracking
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										SMS Alerts
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										Backup Storage
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										Audit Logs
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" checked="checked" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                    </div>
-                    <div class="m-list-settings__group">
-                        <div class="m-list-settings__heading">
-                            System Settings
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										System Logs
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										Error Reporting
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										Applications Logs
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										Backup Servers
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" checked="checked" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                        <div class="m-list-settings__item">
-									<span class="m-list-settings__item-label">
-										Audit Logs
-									</span>
-                            <span class="m-list-settings__item-control">
-										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-											<label>
-												<input type="checkbox" name="">
-												<span></span>
-											</label>
-										</span>
-									</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-pane  m-scrollable" id="m_quick_sidebar_tabs_logs" role="tabpanel">
-                <div class="m-list-timeline">
-                    <div class="m-list-timeline__group">
-                        <div class="m-list-timeline__heading">
-                            Golden Cross (50MA cross up 200MA)
-                        </div>
-                        <div class="m-list-timeline__items">
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo ($techtable[1]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo ($techtable[1]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-											echo($techprice[0]['#text'][0]);
-											?>
-										</span>
-                            </div>
-
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo ($techtable[2]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo ($techtable[2]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo($techprice[3]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo ($techtable[3]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo ($techtable[3]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo($techprice[6]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo ($techtable[4]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$techtable[4]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$techprice[9]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo ($techtable[5]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$techtable[5]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$techprice[12]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-list-timeline__group">
-                        <div class="m-list-timeline__heading">
-                            Death Cross (50MA cross down 200MA)
-                        </div>
-                        <div class="m-list-timeline__items">
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$downcross[1]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$downcross[1]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$downprice[0]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$downcross[2]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$downcross[2]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$downprice[3]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo ($downcross[3]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$downcross[3]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$downprice[6]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$downcross[4]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$downcross[4]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$downprice[9]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$downcross[5]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$downcross[5]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$downprice[12]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-list-timeline__group">
-                        <div class="m-list-timeline__heading">
-                            Oversold + Momentum Rising
-                        </div>
-                        <div class="m-list-timeline__items">
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$oversold[1]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$oversold[1]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$oversprice[0]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo ($oversold[2]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$oversold[2]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$oversprice[3]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$oversold[3]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$oversold[3]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$oversprice[6]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$oversold[4]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$oversold[4]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$oversprice[9]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$oversold[5]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$oversold[5]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$oversprice[12]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-list-timeline__group">
-                        <div class="m-list-timeline__heading">
-                            Overbought + Momentum Falling
-                        </div>
-                        <div class="m-list-timeline__items">
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$overboug[1]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$overboug[1]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$overbprice[0]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo ($overboug[2]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$overboug[2]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$overbprice[3]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$overboug[3]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$overboug[3]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$overbprice[6]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$overboug[4]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$overboug[4]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$overbprice[9]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                            <div class="m-list-timeline__item">
-                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-                                <a href="dash.php?ticket=<?php echo (@$overboug[5]['#text'][0]);?>" class="m-list-timeline__text">
-                                    <?php
-                                    echo (@$overboug[5]['#text'][0]);
-
-                                    ?>
-
-                                </a>
-                                <span class="m-list-timeline__time">
-                                    <?php
-                                    echo(@$overbprice[12]['#text'][0]);
-                                    ?>
-										</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
+<?php require "rightbar.php";?>
 <!-- end::Quick Sidebar -->
 <!-- begin::Scroll Top -->
 <div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">

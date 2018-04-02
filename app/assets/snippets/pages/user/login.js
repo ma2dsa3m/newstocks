@@ -76,7 +76,7 @@ var SnippetLogin = function() {
                         email: true
                     },
                     password: {
-                        required: true
+                        required: false
                     }
                 }
             });

@@ -41,7 +41,7 @@
                             <a  href="#" class="m-menu__link m-menu__toggle">
                                 <span class="m-menu__item-here"></span>
                                 <span class="m-menu__link-text">
-												<?php echo $amdtitle ?>
+												<?php echo @$title ?>
 											</span>
                                 <i class="m-menu__hor-arrow la la-angle-down"></i>
                                 <i class="m-menu__ver-arrow la la-angle-right"></i>
@@ -772,7 +772,7 @@
 												<i class="flaticon-search"></i>
 											</span>
                                 <span class="m-header-search__input-wrapper">
-												<input autocomplete="on" type="text" name="ticket" class="m-header-search__input" value="<?php echo strtolower($amdticket)?>" placeholder="Search..." id="m_quicksearch_input" autofocus>
+												<input autocomplete="on" type="text" name="ticket" class="m-header-search__input" value="<?php echo strtolower(@$ticker)?>" placeholder="Search..." id="m_quicksearch_input" autofocus>
 											</span>
                                 <span class="m-header-search__icon-close" id="m_quicksearch_close">
 												<i class="la la-remove"></i>
@@ -1160,7 +1160,7 @@
                                                     </li>
                                                     <li class="m-nav__separator m-nav__separator--fit"></li>
                                                     <li class="m-nav__item">
-                                                        <a href="snippets/pages/user/login-1.html" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+                                                        <a href="../controller/logout.php" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
                                                             Logout
                                                         </a>
                                                     </li>

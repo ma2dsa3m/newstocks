@@ -1,124 +1,99 @@
 <?php //if(!isset($_SESSION['logged user'])){header('Location:../pages/login.php');};
 require "nokogiri.php";
 
-function parce($p1,$p2,$p3){
-    $num1 = strpos($p1,$p2);
-    if($num1 === false)return 0;
-    $num2 = substr($p1,$num1);
-    return strip_tags(substr($num2,0,strpos($num2,$p3)));
-
-};
-
 @$u = $_REQUEST['ticket'];
-//setcookie("ticket",$u);
-//@$ui = $_COOKIE["ticket"];
-$url = "https://www.marketwatch.com/investing/stock/$u";
-@$string = file_get_contents($url);
-
-$url2 = "https://www.marketwatch.com/investing/stock/$u/analystestimates";
-@$analis = file_get_contents($url2);
+//$u = 'aapl';
+//require 'test.php';
 
 
-$url3 = "https://finance.yahoo.com/quote/$u/sustainability?p=$u";
-@$yahoo = file_get_contents($url3);
-
-$url4 = "https://www.zacks.com/stock/quote/$u?q=$u";
-@$tiprank = file_get_contents($url4);
-
-$url5 = "https://www.stockmonitor.com/stock-screener/golden-cross-50ma-cross-up-200ma/";
-@$tech = file_get_contents($url5);
-
-#lets go parce
-
-$amdtitle = parce($string,'<h1 class="company__name">','</h1>');
-$amdprice = parce($string,'<h3 class="intraday__price ">','</h3>');
-$amdchange = parce($string,'<span class="change--percent--q">','</span>');
-$amdticket = parce($string,'<span class="company__ticker">','</span>');
-$dayopen = parce($string,'<span class="open-value">','</span>');
-$dayclose = parce($string,'<span class="last-value">','</span>');
-
-$marketcap = parce($string,'<small class="kv__label">Market Cap</small>','</span>');
-$highlow = parce($string,'<small class="kv__label">Day Range</small>','</span>');
-
-#intradayvol
-$indayvol = parce($string,'<div class="intraday__volume">','</div>');
-$paterns[0]="/Before Hours Volume:/";
-$paterns[1]="/After Hours Volume:/";
-$paterns[2]="/Average Target Price:/";
-$paterns[3]="/Market Cap/";
-$paterns[4]="/Average Volume/";
-$paterns[5]="/1 Month/";
-$paterns[6]="/3 Month/";
-$paterns[7]="/1 Year/";
-$paterns[8]="/Beta/";
-$paterns[9]="/52 Week Range/";
-$paterns[10]="/Ex-Dividend Date/";
-$paterns[11]="/Dividend/";
-
-
-$indayvol = preg_replace($paterns, '', $indayvol);
-
-$anrec = parce($analis,'<td class="recommendation">','</td>');
-
-#target price
-$target = parce($analis,'<td class="first column2">','</tr>');
-$target = preg_replace($paterns, '', $target);
-
-#marketcap
-$marketcap = parce($string,'<small class="kv__label">Market Cap</small>','</span>');
-$marketcap = preg_replace($paterns, '', $marketcap);
-
-#averagevol
-$avervol = parce($string,'<small class="kv__label">Average Volume</small>','</span>');
-$avervol = preg_replace($paterns, '', $avervol);
-
-#1month perf
-$monper = parce($string,'<td class="table__cell">1 Month</td>','</tr>');
-$monper = preg_replace($paterns, '', $monper);
-
-#3month perf
-$triper = parce($string,'<td class="table__cell">3 Month</td>','</tr>');
-$triper = preg_replace($paterns, '', $triper);
-
-#year perf
-$yearper = parce($string,'<td class="table__cell">1 Year</td>','</tr>');
-$yearper = preg_replace($paterns, '', $yearper);
-
-#esg
-$esg = parce($yahoo,'<div class="Fz(36px) Fw(600) D(ib) Mend(5px)" data-reactid="20">','</div>');
-$esg = preg_replace($paterns, '', $esg);
-
-#tech rank
-$techrank = parce($tiprank,'<td width="50%">','</strong>');
-$techrank = preg_replace($paterns, '', $techrank);
-
-#beta
-$beta = parce($string,'<small class="kv__label">Beta</small>','</span>');
-$beta = preg_replace($paterns, '', $beta);
-
-#weakrange
-$weakrange = parce($string,'<small class="kv__label">52 Week Range</small>','</span>');
-$weakrange = preg_replace($paterns, '', $weakrange);
-
-#timestamp
-$timestamp = parce($string,'<span class="timestamp__time">','</span>');
-
-#dividate
-$dividate = parce($string,'<small class="kv__label">Ex-Dividend Date</small>','</span>');
-$dividate = preg_replace($paterns, '', $dividate);
-
-#divident
-$divident = parce($string,'<small class="kv__label">Dividend</small>','</span>');
-$divident = preg_replace($paterns, '', $divident);
-
-#earnings
-$earnings = parce($tiprank,'<sup class="spl_sup_text"></sup>','</td>');
-$earnings = preg_replace($paterns, '', $earnings);
 
 #index
 $i = file_get_contents("https://finviz.com/quote.ashx?t=$u&ty=c&ta=1&p=d");
 $in = new nokogiri($i);
 $index = ($in->get('span.body-table')->toArray());
+
+
+#company prof
+$info = ($in->get('.fullview-title .fullview-links > a.tab-link')->toArray());
+@$compprof = $info[0]['#text'][0];
+
+//-----------------------------------------------------------------------
+
+#price
+$pr = ($in->get('.snapshot-td2 > b')->toArray());
+@$price = $pr[65]['#text'][0];
+
+#change
+@$change = $pr[71] ["span"][0]['#text'][0];
+
+#volatility
+@$volatility = $pr[53]["small"][0]['#text'][0];
+
+#pe
+@$pe = $pr[1]['#text'][0];
+
+#retern on invest
+@$roi = $pr[39]['#text'][0];
+
+#recomend
+@$recomend = $pr[66]['#text'][0];
+
+#targetprice
+@$targetprice = $pr[28]['span'][0]['#text'][0];
+
+#52weak
+@$weak = $pr[34]['small'][0]['#text'][0];
+
+#beta
+@$beta = $pr[41]['#text'][0];
+
+#sma
+@$sma50 = $pr[68]['span'][0]['#text'][0];
+@$sma20 = $pr[67]['span'][0]['#text'][0];
+@$sma200 = $pr[69]['span'][0]['#text'][0];
+
+#epsyear
+@$epsyear = $pr[20]['span'][0]['#text'][0];
+if(!@$epsyear){@$epsyear = $pr[20]['#text'][0];};
+
+#investmonth
+@$inmonth = $pr[11]['span'][0]['#text'][0];
+
+#investqu
+@$inquarter = $pr[17]['span'][0]['#text'][0];
+
+#investyear
+@$inyear = $pr[29]['span'][0]['#text'][0];
+
+#marketcap
+@$marketcap = $pr[6]['#text'][0];
+
+#earnings
+@$earnings = $pr[62]['#text'][0];
+
+#avervolume
+@$avervol = $pr[70]['#text'][0];
+
+#debttoeq
+@$debt = $pr[55]['span'][0]['#text'][0];
+
+#bps
+@$bps = $pr[24]['#text'][0];
+
+
+//-------------------------------------------------------------------------
+
+#title
+$tit = ($in->get('.fullview-title a > b')->toArray());
+@$title = $tit[0]['#text'][0]; 
+
+
+#ticker
+$tic = ($in->get('#ticker')->toArray());
+@$ticker=$tic[0]['#text'][0];
+
+//---------------------------------------------------------
+
 
 #bigmoneyanalis
 $bigmoney = ($in->get('.fullview-ratings-inner .body-table-rating-neutral > td')->toArray());
@@ -142,5 +117,10 @@ $signal = ($sin->get('table.t-home-table')->toArray());
 $siq = file_get_contents("https://finviz.com/screener.ashx?v=110&s=ta_p_tlsupport");
 $sinq = new nokogiri($siq);
 $signalq = ($sinq->get('#screener-content td')->toArray());
+
+//---------------------------------------------------------
+
+
+
 
 ?>
