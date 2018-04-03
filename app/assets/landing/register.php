@@ -15,7 +15,7 @@
 	<meta name="twitter:widgets:theme" content="light">
 	
 	<!-- Title &amp; Favicon -->
-	<title>Faulkner | Multipurpose HTML5 Template - Login</title>
+	<title>Inrutrade | Registration</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/theme-mountain-favicon.ico">
 
 	<!-- Font -->
@@ -597,7 +597,7 @@
 							<div>
 								<div class="signup-box box rounded xlarge shadow bkg-white">
 									<h3>Register an Account</h3>
-									<p class="mb-20">Already have an account? <a href="register.php" class="fade-location">Click Here</a></p>
+									<p class="mb-20">Already have an account? <a href="login.php" class="fade-location">Click Here</a></p>
 									<div class="register-form-container">
 										<form class="register-form" action="#" method="post" novalidate>
 											<div class="row merged-form-elements">

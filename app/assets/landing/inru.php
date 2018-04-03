@@ -135,12 +135,12 @@
 							</nav>
 							<nav class="navigation nav-block primary-navigation nav-center sub-menu-indicator">
 								<ul>
-									<li class="current contains-sub-menu">
-										<a href="#">Home</a>
+									<li class="current">
+										<a href="inru.php">Home</a>
 
 									</li>
 									<li class="contains-sub-menu">
-										<a href="about-style-one.html">Featured</a>
+										<a href="inru.php">Featured</a>
 										<div class="sub-menu custom-content">
 											<div class="thumbnail">
 												<video poster="images/generic/video-thumbnail-poster.jpg" autoplay loop muted>
@@ -217,7 +217,7 @@
 								<div class="feature-content-inner pt-60 pt-mobile-60 center">
 									<h1 class="mb-20 color-white">Your Financial Analysis.</h1>
 									<p class="lead mb-30 color-white opacity-07">Easily and simply assess the reliability of your investments.</p>
-									<a href="#support" class="button medium rounded scroll-link border-white bkg-hover-navy color-white color-hover-white mb-60 mb-mobile-40" data-offset="150">Discover Faulker Features</a> 
+									<a href="#support" class="button medium rounded scroll-link border-white bkg-hover-navy color-white color-hover-white mb-60 mb-mobile-40" data-offset="150">Discover Inrutrade Features</a>
 								</div>
 							</div>
 						</div>
@@ -346,7 +346,7 @@
 																<h2 class="weight-semi-bold pull-left color-charcoal">Starter</h2>
 																<div class="pricing-table-price pull-right">
 																	<h4>
-																		<span class="currency">$</span>12
+																		<span class="currency">$</span>FREE
 																		<span class="interval mt-10">per month</span>
 																	</h4>
 																</div>
@@ -368,7 +368,7 @@
 																<h2 class="weight-semi-bold pull-left">Expert</h2>
 																<div class="pricing-table-price pull-right">
 																	<h4>
-																		<span class="currency">$</span>18
+																		<span class="currency">$</span>FREE
 																		<span class="interval mt-10">per month</span>
 																	</h4>
 																</div>
@@ -389,7 +389,7 @@
 																<h2 class="weight-semi-bold pull-left">Enterprise</h2>
 																<div class="pricing-table-price pull-right">
 																	<h4>
-																		<span class="currency">$</span>28
+																		<span class="currency">$</span>FREE
 																		<span class="interval mt-10">per month</span>
 																	</h4>
 																</div>
@@ -619,7 +619,7 @@
 					<div class="row">
 						<div class="column width-12">
 							<div class="footer-bottom-inner">
-								<p class="copyright pull-left clear-float-on-mobile">&copy; ThemeMountain. All Rights Reserved.</p> <a href="#" class="scroll-to-top pull-right clear-on-mobile" data-no-hide>Back Top</a>
+								<p class="copyright pull-left clear-float-on-mobile">&copy; Inrutrade Develop.</p> <a href="#" class="scroll-to-top pull-right clear-on-mobile" data-no-hide>Back Top</a>
 							</div>
 						</div>
 					</div>

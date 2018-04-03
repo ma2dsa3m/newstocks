@@ -5,17 +5,17 @@
 	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
 
 	<!-- Open Graph -->
-	<meta property="og:title" content="Your Page Title Here" />
-	<meta property="og:url" content="http://dev.thememountain.com/faulkner/project-style-one.html" />
+	<meta property="og:title" content="Inrutrade | Login" />
+	<meta property="og:url" content="http://inrutrade.com" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="http://dev.thememountain.com/faulkner/images/portfolio/projects/project-1-1.jpg" />
-	<meta property="og:description" content="Your Page Description Here" />
+	<meta property="og:description" content="Inrutrade Web Platform" />
 
 	<!-- Twitter Theme -->
 	<meta name="twitter:widgets:theme" content="light">
 	
 	<!-- Title &amp; Favicon -->
-	<title>Faulkner | Multipurpose HTML5 Template - Login</title>
+	<title>Inrutrade | Login</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/theme-mountain-favicon.ico">
 
 	<!-- Font -->
@@ -58,48 +58,15 @@
 								</li>
 								<li>
 									<a href="#" class="contains-sub-menu">Service Pages</a>
-									<ul class="sub-menu">
-										<li>
-											<a href="services-style-one.html">Services Original</a>
-										</li>
-										<li>
-											<a href="services-style-two.html">Services Style 2</a>
-										</li>
-										<li>
-											<a href="services-style-three.html">Services Style 3</a>
-										</li>
-									</ul>
+
 								</li>
 								<li>
 									<a href="#" class="contains-sub-menu">Contact Pages</a>
-									<ul class="sub-menu">
-										<li>
-											<a href="contact-style-one.html">Contact Original</a>
-										</li>
-										<li>
-											<a href="contact-style-two.html">Contact Style 2</a>
-										</li>
-										<li>
-											<a href="contact-style-three.html">Contact Style 3</a>
-										</li>
-									</ul>
+
 								</li>
 								<li class="current">
 									<a href="#" class="contains-sub-menu">Login Pages</a>
-									<ul class="sub-menu">
-										<li>
-											<a href="index-login.html">Login Original</a>
-										</li>
-										<li class="current">
-											<a href="index-login-2.html">Login Style 2</a>
-										</li>
-										<li>
-											<a href="index-login-3.html">Login Style 3</a>
-										</li>
-										<li>
-											<a href="index-login-4.html">Login Style 3</a>
-										</li>
-									</ul>
+
 								</li>
 								<li>
 									<a href="#" class="contains-sub-menu">Register Pages</a>
@@ -494,8 +461,8 @@
 						<div class="column width-12 nav-bar-inner">
 							<div class="logo">
 								<div class="logo-inner">
-									<a href="index.html"><img src="images/logo-dark.png" alt="Faulkner Logo" /></a>
-									<a href="index.html"><img src="images/logo.png" alt="Faulkner Logo" /></a>
+									<a href="inru.php"><img src="images/logo-dark.png" alt="Inrutrade Logo" /></a>
+									<a href="inru.php"><img src="images/logo.png" alt="Inrutrade Logo" /></a>
 								</div>
 							</div>
 							<nav class="navigation nav-block secondary-navigation nav-right">
@@ -528,7 +495,7 @@
 					<div class="row flex">
 						<div class="column width-5 offset-1 push-6 v-align-middle">
 							<div>
-								<h2>Access all our tools with a single Faulkner account</h2>
+								<h2>Access all our tools with a single Inrutrade account</h2>
 								<ul class="list-unstyled">
 									<li><span class="icon-check color-green"></span> All-device friendly.</li>
 									<li><span class="icon-check color-green"></span> Google search optimized.</li>
@@ -648,7 +615,7 @@
 						<div class="column width-3">
 							<div class="widget">
 								<div class="footer-logo">
-									<a href="index.html"><img src="images/logo.png" alt="Faulkner Logo" /></a>
+									<a href="inru.php"><img src="images/logo.png" alt="Inrutrade Logo" /></a>
 								</div>
 							</div>
 						</div>
@@ -709,7 +676,7 @@
 					<div class="row">
 						<div class="column width-12">
 							<div class="footer-bottom-inner">
-								<p class="copyright pull-left clear-float-on-mobile">&copy; ThemeMountain. All Rights Reserved.</p> <a href="#" class="scroll-to-top pull-right clear-on-mobile" data-no-hide>Back Top</a>
+								<p class="copyright pull-left clear-float-on-mobile">&copy; Inrutrade Develop. All Rights Reserved.</p> <a href="#" class="scroll-to-top pull-right clear-on-mobile" data-no-hide>Back Top</a>
 							</div>
 						</div>
 					</div>
