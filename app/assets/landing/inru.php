@@ -113,8 +113,8 @@
 						<div class="column width-12 nav-bar-inner">
 							<div class="logo">
 								<div class="logo-inner">
-									<a href="#"><img src="images/logo-dark.png" alt="Inrutrade Logo" /></a>
-									<a href="#"><img src="images/logo.png" alt="Inrutrade Logo" /></a>
+									<a href="inru.php"><img src="images/logo-dark.png" alt="Inrutrade Logo" /></a>
+									<a href="inru.php"><img src="images/logo.png" alt="Inrutrade Logo" /></a>
 								</div>
 							</div>
 							<nav class="navigation nav-block secondary-navigation nav-right">
@@ -222,7 +222,7 @@
 							<div>
 								<h5 class="mb-10 opacity-07">Top Level Support</h5> 
 								<h3>Connect to your favourite stocks</h3>
-								<p>Treat every guest like a VIPFrom dining preferences to allergies to special occasions, Guestbook allows you to keep track of everything that matters. Bring diners back for more by creating targeted lists and exporting them to your favourite marketing tool.</p>
+								<p>Your Daily Market Digest.With Inrutrade, you’ll anticipate today’s events and what they mean for the stock market… includes powerful, profitable stock ideas.</p>
 								<a href="#">Read More &rarr;</a>
 							</div>
 						</div>
@@ -245,8 +245,8 @@
 						<div class="column width-5 push-6 mb-mobile-40 v-align-middle">
 							<div>
 								<h5 class="mb-10 color-white opacity-07">Connect Anywhere</h5> 
-								<h3 class="color-white">Import Your Boards On Mobile</h3>
-								<p class="color-white">Treat every guest like a VIPFrom dining preferences to allergies to special occasions, Guestbook allows you to keep track of everything that matters. Bring diners back for more by creating targeted lists and exporting them to your favourite marketing tool.</p>
+								<h3 class="color-white">WORKSPACE</h3>
+								<p class="color-white">The Inrutrade Analytics stock and ETF chart is designed to facilitate a quick, reliable Buy/Sell decision. Everything you need to make a decision is on one chart.The intraday chart gives an up to the minute snapshot of today’s trading activity. The Intraday Alert Message will indicate the conditions triggering today, e.g. “Gap up at open on high volume”.</p>
 								<a href="#" class="color-white color-hover-white">Read More &rarr;</a>
 							</div>
 						</div>
@@ -265,8 +265,8 @@
 						<div class="column width-5 offset-1 mb-mobile-40 v-align-middle">
 							<div>
 								<h5 class="mb-10  opacity-07">On The Road</h5> 
-								<h3>Create New Boards On The Fly</h3>
-								<p>Treat every guest like a VIPFrom dining preferences to allergies to special occasions, Guestbook allows you to keep track of everything that matters. Bring diners back for more by creating targeted lists and exporting them to your favourite marketing tool.</p>
+								<h3>DISCOVERY</h3>
+								<p>Inrutrade Web Platform automatically finds stock ideas based on a similar stock you identify.Once a stock is chosen, the  engine analyzes the stock universe and displays relevant stock ideas.</p>
 								<a href="#">Read More &rarr;</a>
 							</div>
 						</div>

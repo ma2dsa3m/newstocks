@@ -599,7 +599,7 @@
 									<h3>Register an Account</h3>
 									<p class="mb-20">Already have an account? <a href="login.php" class="fade-location">Click Here</a></p>
 									<div class="register-form-container">
-										<form class="register-form" action="#" method="post" novalidate>
+										<form class="register-form" action="../../controller/logincontroller.php" method="post" novalidate>
 											<div class="row merged-form-elements">
 												<div class="column width-6">
 													<div class="field-wrapper">
