@@ -6,7 +6,7 @@
             <div class="m-stack__item m-brand ">
                 <div class="m-stack m-stack--ver m-stack--general">
                     <div class="m-stack__item m-stack__item--middle m-brand__logo">
-                        <a href="index.html" class="m-brand__logo-wrapper">
+                        <a href="dash.php?ticket=<?php echo @$ticker?>" class="m-brand__logo-wrapper">
                             <img alt="" src="../assets/demo/demo7/media/img/logo/logo.png"/>
                         </a>
                     </div>
@@ -46,141 +46,10 @@
                                 <i class="m-menu__hor-arrow la la-angle-down"></i>
                                 <i class="m-menu__ver-arrow la la-angle-right"></i>
                             </a>
-                            <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
+                            <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left" style="width:600px">
                                 <span class="m-menu__arrow m-menu__arrow--adjust"></span>
                                 <ul class="m-menu__subnav">
-                                    <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                        <a  href="index.html" class="m-menu__link ">
-                                            <i class="m-menu__link-icon flaticon-diagram"></i>
-                                            <span class="m-menu__link-title">
-															<span class="m-menu__link-wrap">
-																<span class="m-menu__link-text">
-																	Generate Reports
-																</span>
-																<span class="m-menu__link-badge">
-																	<span class="m-badge m-badge--success">
-																		2
-																	</span>
-																</span>
-															</span>
-														</span>
-                                        </a>
-                                    </li>
-                                    <li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="hover" data-redirect="true" aria-haspopup="true">
-                                        <a  href="#" class="m-menu__link m-menu__toggle">
-                                            <i class="m-menu__link-icon flaticon-business"></i>
-                                            <span class="m-menu__link-text">
-															Manage Orders
-														</span>
-                                            <i class="m-menu__hor-arrow la la-angle-right"></i>
-                                            <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                        </a>
-                                        <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
-                                            <span class="m-menu__arrow "></span>
-                                            <ul class="m-menu__subnav">
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Latest Orders
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Pending Orders
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Processed Orders
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Delivery Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Payments
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Customers
-																	</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="hover" data-redirect="true" aria-haspopup="true">
-                                        <a  href="#" class="m-menu__link m-menu__toggle">
-                                            <i class="m-menu__link-icon flaticon-chat-1"></i>
-                                            <span class="m-menu__link-text">
-															Customer Feedbacks
-														</span>
-                                            <i class="m-menu__hor-arrow la la-angle-right"></i>
-                                            <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                        </a>
-                                        <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
-                                            <span class="m-menu__arrow "></span>
-                                            <ul class="m-menu__subnav">
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Customer Feedbacks
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Supplier Feedbacks
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Reviewed Feedbacks
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Resolved Feedbacks
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Feedback Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                        <a  href="inner.html" class="m-menu__link ">
-                                            <i class="m-menu__link-icon flaticon-users"></i>
-                                            <span class="m-menu__link-text">
-															Register Member
-														</span>
-                                        </a>
-                                    </li>
+                                    <?php echo(@$about)?>
                                 </ul>
                             </div>
                         </li>
@@ -188,7 +57,7 @@
                             <a  href="#" class="m-menu__link m-menu__toggle">
                                 <span class="m-menu__item-here"></span>
                                 <span class="m-menu__link-text">
-												Signal Reports
+												People
 											</span>
                                 <i class="m-menu__hor-arrow la la-angle-down"></i>
                                 <i class="m-menu__ver-arrow la la-angle-right"></i>
@@ -197,148 +66,8 @@
                                 <span class="m-menu__arrow m-menu__arrow--adjust"></span>
                                 <div class="m-menu__subnav">
                                     <ul class="m-menu__content">
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																TD Support
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <?php
-                                                $i = [0,1,2,3,];
-                                                foreach ($i as $io){
-                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-    <a  href="dash.php?ticket=',$signal[2]["tr"][1] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
-        <i class="m-menu__link-icon flaticon-map"></i>
-        <span class="m-menu__link-text">
-																		',$signal[2]["tr"][1] ["td"][$io]["a"][0]["#text"][0],'
-																	</span>
-    </a>
-</li>';
 
-
-
-
-                                                };
-                                                ?>
-
-                                            </ul>
-                                        </li>
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Channel Up
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <?php
-                                                $i = [0,1,2,3,];
-                                                foreach ($i as $io){
-                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-    <a  href="dash.php?ticket=',$signal[3]["tr"][1] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
-        <i class="m-menu__link-icon flaticon-map"></i>
-        <span class="m-menu__link-text">
-																		',$signal[3]["tr"][1] ["td"][$io]["a"][0]["#text"][0],'
-																	</span>
-    </a>
-</li>';
-
-
-
-
-                                                };
-                                                ?>
-                                            </ul>
-                                        </li>
-
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																TD Resistance
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <?php
-                                                $i = [0,1,2,3,];
-                                                foreach ($i as $io){
-                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-    <a  href="dash.php?ticket=',$signal[2]["tr"][2] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
-        <i class="m-menu__link-icon flaticon-map"></i>
-        <span class="m-menu__link-text">
-																		',$signal[2]["tr"][2] ["td"][$io]["a"][0]["#text"][0],'
-																	</span>
-    </a>
-</li>';
-
-
-
-
-                                                };
-                                                ?>
-
-                                            </ul>
-                                        </li>
-
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Chanel
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <?php
-                                                $i = [0,1,2,3,];
-                                                foreach ($i as $io){
-                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-    <a  href="dash.php?ticket=',$signal[3]["tr"][2] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
-        <i class="m-menu__link-icon flaticon-map"></i>
-        <span class="m-menu__link-text">
-																		',$signal[3]["tr"][2] ["td"][$io]["a"][0]["#text"][0],'
-																	</span>
-    </a>
-</li>';
-
-
-
-
-                                                };
-                                                ?>
-
-                                            </ul>
-                                        </li>
-
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Horizontal S/R
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <?php
-                                                $i = [0,1,2,3,];
-                                                foreach ($i as $io){
-                                                    echo '<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-    <a  href="dash.php?ticket=',$signal[2]["tr"][3] ["td"][$io]["a"][0]["#text"][0],'" class="m-menu__link ">
-        <i class="m-menu__link-icon flaticon-map"></i>
-        <span class="m-menu__link-text">
-																		',$signal[2]["tr"][3] ["td"][$io]["a"][0]["#text"][0],'
-																	</span>
-    </a>
-</li>';
-
-
-
-
-                                                };
-                                                ?>
-
-                                            </ul>
-                                        </li>
+                                    <?php //var_dump($people)?>
 
                                     </ul>
                                 </div>

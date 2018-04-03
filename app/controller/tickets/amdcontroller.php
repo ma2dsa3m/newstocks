@@ -80,6 +80,10 @@ if(!@$epsyear){@$epsyear = $pr[20]['#text'][0];};
 #bps
 @$bps = $pr[24]['#text'][0];
 
+#about
+$ab = ($in->get('td.fullview-profile')->toArray());
+@$about = $ab[0]["#text"][0];
+
 
 //-------------------------------------------------------------------------
 
@@ -119,8 +123,6 @@ $sinq = new nokogiri($siq);
 $signalq = ($sinq->get('#screener-content td')->toArray());
 
 //---------------------------------------------------------
-
-
 
 
 ?>

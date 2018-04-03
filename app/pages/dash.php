@@ -344,37 +344,10 @@ require "../controller/dashcontroller.php";
                                 <div class="m-portlet__head-tools">
                                     <ul class="m-portlet__nav">
                                         <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
-                                            <a href="#" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-secondary m-btn m-btn--label-danger">
+                                            <a href="chart.php?ticket=<?php echo @$ticker?>" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-info m-btn m-btn--label-info">
                                                Chart Table
                                             </a>
-                                            <div class="m-dropdown__wrapper">
-                                                <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 50.203125px;"></span>
-                                                <div class="m-dropdown__inner">
-                                                    <div class="m-dropdown__body">
-                                                        <div class="m-dropdown__content">
-                                                            <ul class="m-nav">
-                                                                <li class="m-nav__section m-nav__section--first">
-																			<span class="m-nav__section-text">
-																				Charting by TradingView
-																			</span>
-                                                                </li>
-                                                                <li class="m-nav__item">
-                                                                    <a href="chart.php?ticket=<?php echo @$ticker?>" class="m-nav__link">
-                                                                        <i class="m-nav__link-icon flaticon-share"></i>
-                                                                        <span class="m-nav__link-text">
-																					1d-1h-5m
-																				</span>
-                                                                    </a>
-                                                                </li>
 
-                                                                <button type="button" class="btn btn-success" data-container="body" data-toggle="m-popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
-                                                                    Popover on left
-                                                                </button>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </li>
                                     </ul>
                                 </div>

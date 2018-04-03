@@ -5,7 +5,7 @@
 <div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-light ">
     <!-- BEGIN: Brand -->
     <div class="m-brand  m-brand--skin-light ">
-        <a href="index.html" class="m-brand__logo">
+        <a href="dash.php?ticket=<?php echo @$ticker?>" class="m-brand__logo">
             <img alt="" src="../assets/demo/demo7/media/img/logo/logo.png"/>
         </a>
     </div>
