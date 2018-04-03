@@ -284,9 +284,9 @@
 					<div class="row flex">
 						<div class="column width-5 push-6 mb-mobile-40 v-align-middle">
 							<div>
-								<h5 class="mb-10 color-white opacity-07">Adapt To Clients</h5> 
-								<h3 class="color-white">Share With Clients On Their Terms</h3>
-								<p class="color-white">Treat every guest like a VIPFrom dining preferences to allergies to special occasions, Guestbook allows you to keep track of everything that matters. Bring diners back for more by creating targeted lists and exporting them to your favourite marketing tool.</p>
+								<h5 class="mb-10 color-white opacity-07">Inside Finance</h5>
+								<h3 class="color-white">INSIGHTS</h3>
+								<p class="color-white">Inrutrade provides  weekly insights on the market, what you should do next, plus strong and weak stock & ETF ideas.We recaps the previous day, what to expect today and offers specific buy/sell stock ideas.</p>
 								<a href="#" class="color-hover-white">Read More &rarr;</a>
 							</div>
 						</div>
@@ -448,7 +448,7 @@
 							<div class="hero-content">
 								<div class="hero-content-inner">
 									<h3>Not fully convinced?</h3>
-									<p class="lead color-grey">Find out everything you need to know in our weekly live webinar. Interviews with creators to discover stories behind products.</p>
+									<p class="lead color-grey">Inrutrade  is a subscription service chosen by asset managers and serious individual investors to reduce risk, identify profitable stock and ETF opportunities and improve workflow. The Analytics are based on the technical and fundamental work of stock market experts , delivered via Desktop and iPad applications.</p>
 									<p class="inline mb-0"><a class="icon-circled small icon-play border-theme bkg-hover-theme color-hover-white left" href="#"></a></p>
 								</div>
 							</div>
