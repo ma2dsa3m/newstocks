@@ -6,9 +6,9 @@
 
 	<!-- Open Graph -->
 	<meta property="og:title" content="Inrutrade" />
-	<meta property="og:url" content="http://dev.thememountain.com/faulkner/project-style-one.html" />
+	<meta property="og:url" content="http://dev.thememountain.com/Inrutrade/project-style-one.html" />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="http://dev.thememountain.com/faulkner/images/portfolio/projects/project-1-1.jpg" />
+	<meta property="og:image" content="http://dev.thememountain.com/Inrutrade/images/portfolio/projects/project-1-1.jpg" />
 	<meta property="og:description" content="Your Page Description Here" />
 
 	<!-- Twitter Theme -->
@@ -113,8 +113,8 @@
 						<div class="column width-12 nav-bar-inner">
 							<div class="logo">
 								<div class="logo-inner">
-									<a href="#"><img src="images/logo-dark.png" alt="Faulkner Logo" /></a>
-									<a href="#"><img src="images/logo.png" alt="Faulkner Logo" /></a>
+									<a href="#"><img src="images/logo-dark.png" alt="Inrutrade Logo" /></a>
+									<a href="#"><img src="images/logo.png" alt="Inrutrade Logo" /></a>
 								</div>
 							</div>
 							<nav class="navigation nav-block secondary-navigation nav-right">
@@ -162,31 +162,14 @@
 													<h4>Get started</h4>
 												</li>
 												<li>
-													<p>Drastically improve how you manage your money with seamless and simple monthtly invoicing. See why so many people choose FaulknerPay as their preferred money management solution.</p>
+													<p>Drastically improve how you manage your money with seamless and simple monthtly invoicing. See why so many people choose Inrutrade as their preferred stocks management solution.</p>
 												</li>
 											</ul>
 										</div>
 									</li>
 									<li class="contains">
 										<a href="about-style-one.html">About Inrutrade</a>
-										<ul class="sub-menu">
-											<li class="contains-sub-menu">
-												<a href="about-style-one.html">About</a>
 
-											</li>
-											<li class="contains">
-												<a href="services-style-one.html">Services Original</a>
-
-											</li>
-											<li class="contains">
-												<a href="contact-style-one.html">Contact Original</a>
-
-											</li>
-
-
-
-
-										</ul>
 									</li>
 
 									<li class="contains">
@@ -238,7 +221,7 @@
 						<div class="column width-6 v-align-middle">
 							<div>
 								<h5 class="mb-10 opacity-07">Top Level Support</h5> 
-								<h3>Connect to your favourite apps</h3>
+								<h3>Connect to your favourite stocks</h3>
 								<p>Treat every guest like a VIPFrom dining preferences to allergies to special occasions, Guestbook allows you to keep track of everything that matters. Bring diners back for more by creating targeted lists and exporting them to your favourite marketing tool.</p>
 								<a href="#">Read More &rarr;</a>
 							</div>
@@ -486,7 +469,7 @@
 										<div class="row">
 											<div class="column width-12">
 												<h3>Sign in to continue</h3>
-												<p class="mb-20">Need a client account? <a href="../../pages/login.php" class="fade-location">Click Here</a></p>
+												<p class="mb-20">Need a client account? <a href="register.php" class="fade-location">Click Here</a></p>
 												<div class="login-form-container">
 													<form class="login-form" action="../../controller/logincontroller.php" method="post" novalidate>
 														<div class="row">
@@ -599,7 +582,7 @@
 										<h3 class="widget-title mb-30">Contact</h3>
 										<ul>
 											<li><a href="#">Email us</a></li>
-											<li><a href="#">Tweet Faulkner</a></li>
+											<li><a href="#">Tweet Inrutrade</a></li>
 											<li><a href="#">Visit the office</a></li>
 										</ul>
 									</div>
@@ -609,7 +592,7 @@
 						<div class="column width-3 right center-on-mobile">
 							<div class="widget">
 								<div class="footer-logo">
-									<a href="index.html"><img src="images/logo-dark.png" alt="Faulkner Logo" /></a>
+									<a href="index.html"><img src="images/logo-dark.png" alt="Inrutrade Logo" /></a>
 								</div>
 							</div>
 						</div>

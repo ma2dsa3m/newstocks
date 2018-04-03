@@ -6,9 +6,9 @@
 
 	<!-- Open Graph -->
 	<meta property="og:title" content="Your Page Title Here" />
-	<meta property="og:url" content="http://dev.thememountain.com/faulkner/project-style-one.html" />
+	<meta property="og:url" content="http://dev.thememountain.com/Inrutrade/project-style-one.html" />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="http://dev.thememountain.com/faulkner/images/portfolio/projects/project-1-1.jpg" />
+	<meta property="og:image" content="http://dev.thememountain.com/Inrutrade/images/portfolio/projects/project-1-1.jpg" />
 	<meta property="og:description" content="Your Page Description Here" />
 
 	<!-- Twitter Theme -->
@@ -541,8 +541,8 @@
 						<div class="column width-12 nav-bar-inner">
 							<div class="logo">
 								<div class="logo-inner">
-									<a href="index.html"><img src="images/logo-dark.png" alt="Faulkner Logo" /></a>
-									<a href="index.html"><img src="images/logo.png" alt="Faulkner Logo" /></a>
+									<a href="inru.php"><img src="images/logo-dark.png" alt="Inrutrade Logo" /></a>
+									<a href="inru.php"><img src="images/logo.png" alt="Inrutrade Logo" /></a>
 								</div>
 							</div>
 							<nav class="navigation nav-block secondary-navigation nav-right">
@@ -575,7 +575,7 @@
 					<div class="row flex">
 						<div class="column width-5 offset-1 push-6 v-align-middle">
 							<div>
-								<h2>Access all our tools with a single Faulkner account</h2>
+								<h2>Access all our tools with a single Inrutrade account</h2>
 								<ul class="list-unstyled">
 									<li><span class="icon-check color-green"></span> All-device friendly.</li>
 									<li><span class="icon-check color-green"></span> Google search optimized.</li>
@@ -587,7 +587,7 @@
 									<img src="images/team/team-member-1-square.jpg" width="60" height="60" alt=""/>
 								</div>
 								<div>
-									<h4 class="mb-10">Kay Casey <span class="opacity-05">Faulkner Support</span></h4>
+									<h4 class="mb-10">Kay Casey <span class="opacity-05">Inrutrade Support</span></h4>
 									<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 									<p><a href="#">View New Features &rarr;</a></p>
 								</div>
@@ -703,7 +703,7 @@
 						<div class="column width-3">
 							<div class="widget">
 								<div class="footer-logo">
-									<a href="index.html"><img src="images/logo.png" alt="Faulkner Logo" /></a>
+									<a href="inru.php"><img src="images/logo.png" alt="Inrutrade Logo" /></a>
 								</div>
 							</div>
 						</div>
@@ -713,7 +713,7 @@
 									<div class="widget">
 										<h3 class="widget-title mb-30">Contact</h3>
 										<address>
-											hello@faulkner.io<br>
+											hello@Inrutrade.io<br>
 											Faulk &amp; Co, Inc.<br>
 											44 St Grove Ave #81<br>
 											Walnut, United States
@@ -764,7 +764,7 @@
 					<div class="row">
 						<div class="column width-12">
 							<div class="footer-bottom-inner">
-								<p class="copyright pull-left clear-float-on-mobile">&copy; ThemeMountain. All Rights Reserved.</p> <a href="#" class="scroll-to-top pull-right clear-on-mobile" data-no-hide>Back Top</a>
+								<p class="copyright pull-left clear-float-on-mobile">&copy; Inrutrade Develop. All Rights Reserved.</p> <a href="#" class="scroll-to-top pull-right clear-on-mobile" data-no-hide>Back Top</a>
 							</div>
 						</div>
 					</div>
