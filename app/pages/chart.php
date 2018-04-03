@@ -10,7 +10,7 @@ require "../controller/dashcontroller.php";
 <head>
     <meta charset="utf-8" />
     <title>
-        Inrutrade | Dashboard
+        Inrutrade | Chart Table
     </title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
