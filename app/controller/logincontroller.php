@@ -33,18 +33,18 @@ if ( isset($data['do_signup']))
         
         $user->password = password_hash($data['passwordreg'],PASSWORD_DEFAULT);
         $user->email = $data['emailreg'];
-        $user->avatar="";
-        $user->firstname=$data['userfirstname'];
+        $user->firstname = $data['regfirstname'];
+        $user->lastname = $data['reglastname'];
         $user->datereg = date('Y-m-d');
 
         R::store($user);
 
         
 
-        header('Location:../pages/login.php');
+        header('Location:../assets/landing/login.php');
 
      }else{
-            header('Location:index.php');
+            header('Location:../assets/landing/register.php');
         }
 
  } 
@@ -74,7 +74,7 @@ if ( isset($data['do_signup']))
     {
         //echo "Где то вы ввели какую то чушь";
     
-        header('Location:../../index.php');
+        header('Location:../assets/landing/login.php');
     }
      
     

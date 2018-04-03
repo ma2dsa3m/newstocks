@@ -1,6 +1,6 @@
-<?php //if (!isset($_SESSION['logged user'])){header('Location:login.php');};
+<?php
 require "../controller/dashcontroller.php";
-
+if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.php');};
 ?>
 
 <!DOCTYPE html>
