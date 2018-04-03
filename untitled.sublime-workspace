@@ -16,13 +16,10 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php //if(!isset($_SESSION['logged user'])){header('Location:../pages/login.php');};\nrequire \"nokogiri.php\";\n\n@$u = $_REQUEST['ticket'];\n//$u = 'aapl';\n//require 'test.php';\n\n\n\n#index\n$i = file_get_contents(\"https://finviz.com/quote.ashx?t=$u&ty=c&ta=1&p=d\");\n$in = new nokogiri($i);\n$index = ($in->get('span.body-table')->toArray());\n\n\n#company prof\n$info = ($in->get('.fullview-title .fullview-links > a.tab-link')->toArray());\n@$compprof = $info[0]['#text'][0];\n\n//-----------------------------------------------------------------------\n\n#price\n$pr = ($in->get('.snapshot-td2 > b')->toArray());\n@$price = $pr[65]['#text'][0];\n\n#change\n@$change = $pr[71] [\"span\"][0]['#text'][0];\n\n#volatility\n@$volatility = $pr[53][\"small\"][0]['#text'][0];\n\n#pe\n@$pe = $pr[1]['#text'][0];\n\n#retern on invest\n@$roi = $pr[39]['#text'][0];\n\n#recomend\n@$recomend = $pr[66]['#text'][0];\n\n#targetprice\n@$targetprice = $pr[28]['span'][0]['#text'][0];\n\n#52weak\n@$weak = $pr[34]['small'][0]['#text'][0];\n\n#beta\n@$beta = $pr[41]['#text'][0];\n\n#sma\n@$sma50 = $pr[68]['span'][0]['#text'][0];\n@$sma20 = $pr[67]['span'][0]['#text'][0];\n@$sma200 = $pr[69]['span'][0]['#text'][0];\n\n#epsyear\n@$epsyear = $pr[20]['span'][0]['#text'][0];\nif(!@$epsyear){@$epsyear = $pr[20]['#text'][0];};\n\n#investmonth\n@$inmonth = $pr[11]['span'][0]['#text'][0];\n\n#investqu\n@$inquarter = $pr[17]['span'][0]['#text'][0];\n\n#investyear\n@$inyear = $pr[29]['span'][0]['#text'][0];\n\n#marketcap\n@$marketcap = $pr[6]['#text'][0];\n\n#earnings\n@$earnings = $pr[62]['#text'][0];\n\n#avervolume\n@$avervol = $pr[70]['#text'][0];\n\n#debttoeq\n@$debt = $pr[55]['span'][0]['#text'][0];\n\n#bps\n@$bps = $pr[24]['#text'][0];\n\n\n//-------------------------------------------------------------------------\n\n#title\n$tit = ($in->get('.fullview-title a > b')->toArray());\n@$title = $tit[0]['#text'][0]; \n\n\n#ticker\n$tic = ($in->get('#ticker')->toArray());\n@$ticker=$tic[0]['#text'][0];\n\n//---------------------------------------------------------\n\n\n#bigmoneyanalis\n$bigmoney = ($in->get('.fullview-ratings-inner .body-table-rating-neutral > td')->toArray());\n\n#news\n$news = ($in->get('#news-table td')->toArray());\n\n#inside\n@$inside = ($in->get('.insider-sale-row-2 > td')->toArray());\nif(@$inside[0]['a'][0]['#text'][0]===0){@$inside = ($in->get('tr.insider-option-row')->toArray());};\n\n#inside\n@$inside = ($in->get('.insider-sale-row-2 > td')->toArray());\n\n#signal\n$si = file_get_contents(\"https://finviz.com\");\n$sin = new nokogiri($si);\n$signal = ($sin->get('table.t-home-table')->toArray());\n\n#signal2\n$siq = file_get_contents(\"https://finviz.com/screener.ashx?v=110&s=ta_p_tlsupport\");\n$sinq = new nokogiri($siq);\n$signalq = ($sinq->get('#screener-content td')->toArray());\n\n//---------------------------------------------------------\n\n\n?>",
 			"file": "app/controller/tickets/amdcontroller.php",
-			"file_size": 2765,
-			"file_write_time": 131671315253621839,
 			"settings":
 			{
-				"buffer_size": 2763,
+				"buffer_size": 2853,
 				"line_ending": "Unix"
 			}
 		},
@@ -50,7 +47,7 @@
 			"file": "app/pages/dash.php",
 			"settings":
 			{
-				"buffer_size": 32751,
+				"buffer_size": 30509,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -59,16 +56,16 @@
 			"file": "app/controller/logincontroller.php",
 			"settings":
 			{
-				"buffer_size": 1903,
+				"buffer_size": 1968,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/private/var/folders/zw/gzmccl8x26b7wsd8dk3b03y00000gn/T/fz3temp-2/db.php",
+			"file": "app/assets/landing/register.php",
 			"settings":
 			{
-				"buffer_size": 145,
+				"buffer_size": 13813,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -77,7 +74,7 @@
 			"file": "app/pages/chart.php",
 			"settings":
 			{
-				"buffer_size": 13489,
+				"buffer_size": 13490,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -86,7 +83,7 @@
 			"file": "app/pages/topbar.php",
 			"settings":
 			{
-				"buffer_size": 78020,
+				"buffer_size": 63248,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -130,12 +127,12 @@
 	[
 		"/Applications/XAMPP/xamppfiles/htdocs/stocks",
 		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app",
-		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/controller",
-		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/controller/tickets",
-		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/pages"
+		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/assets",
+		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/assets/landing"
 	],
 	"file_history":
 	[
+		"/private/var/folders/zw/gzmccl8x26b7wsd8dk3b03y00000gn/T/fz3temp-2/db.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/pages/login.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/pages/dash.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/controller/tickets/test.php",
@@ -144,7 +141,6 @@
 		"/Users/madsam/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/Users/madsam/Downloads/blurred-gear-loader/index.html",
 		"/Applications/XAMPP/xamppfiles/htdocs/stocks/libs/parce.php",
-		"/private/var/folders/zw/gzmccl8x26b7wsd8dk3b03y00000gn/T/fz3temp-2/db.php",
 		"/Applications/PhpStorm.app/Contents/bin/phpstorm.vmoptions"
 	],
 	"find":
@@ -189,7 +185,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2763,
+						"buffer_size": 2853,
 						"regions":
 						{
 						},
@@ -273,7 +269,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 32751,
+						"buffer_size": 30509,
 						"regions":
 						{
 						},
@@ -303,7 +299,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1903,
+						"buffer_size": 1968,
 						"regions":
 						{
 						},
@@ -321,7 +317,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 722.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -329,27 +325,28 @@
 				},
 				{
 					"buffer": 5,
-					"file": "/private/var/folders/zw/gzmccl8x26b7wsd8dk3b03y00000gn/T/fz3temp-2/db.php",
+					"file": "app/assets/landing/register.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 145,
+						"buffer_size": 13813,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								117
+								2163,
+								2163
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 8155.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -361,15 +358,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13489,
+						"buffer_size": 13490,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11418,
-								11418
+								0,
+								0
 							]
 						],
 						"settings":
@@ -391,7 +388,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 78020,
+						"buffer_size": 63248,
 						"regions":
 						{
 						},
