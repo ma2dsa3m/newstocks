@@ -77,7 +77,145 @@
                             <a  href="#" class="m-menu__link m-menu__toggle">
                                 <span class="m-menu__item-here"></span>
                                 <span class="m-menu__link-text">
-												Orders
+												Top Up
+											</span>
+                                <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                <i class="m-menu__ver-arrow la la-angle-right"></i>
+                            </a>
+                            <div class="m-menu__submenu  m-menu__submenu--fixed-m m-menu__submenu--center" style="width: 330px">
+                                <span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                                <div class="m-menu__subnav">
+                                    <ul class="m-menu__content">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Tiker</th>
+                                                <th>Last</th>
+                                                <th>Change</th>
+                                                <th>Signal</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[6]['a'][0]['#text'][0])?>" ><?php echo(@$topup[6]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[7]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[8]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[11]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[12]['a'][0]['#text'][0])?>" ><?php echo(@$topup[12]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[13]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[14]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[17]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[18]['a'][0]['#text'][0])?>" ><?php echo(@$topup[18]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[19]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[20]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[23]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[24]['a'][0]['#text'][0])?>" ><?php echo(@$topup[24]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[25]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[26]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[29]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[30]['a'][0]['#text'][0])?>" ><?php echo(@$topup[30]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[31]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[32]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[35]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[36]['a'][0]['#text'][0])?>" ><?php echo(@$topup[36]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[37]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[38]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[41]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[42]['a'][0]['#text'][0])?>" ><?php echo(@$topup[42]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[43]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[44]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[47]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[48]['a'][0]['#text'][0])?>" ><?php echo(@$topup[48]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[49]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[50]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[53]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[54]['a'][0]['#text'][0])?>" ><?php echo(@$topup[54]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[55]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[56]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[59]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[60]['a'][0]['#text'][0])?>" ><?php echo(@$topup[60]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[61]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[62]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[65]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[66]['a'][0]['#text'][0])?>" ><?php echo(@$topup[66]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[67]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[68]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[71]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[72]['a'][0]['#text'][0])?>" ><?php echo(@$topup[72]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[73]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[74]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[77]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[78]['a'][0]['#text'][0])?>" ><?php echo(@$topup[78]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[79]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[80]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[83]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[84]['a'][0]['#text'][0])?>" ><?php echo(@$topup[84]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[85]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[86]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[89]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$topup[90]['a'][0]['#text'][0])?>" ><?php echo(@$topup[90]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$topup[91]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[92]["span"][0]['#text'][0])?></td>
+                                                <td><?php echo(@$topup[95]['a'][0]['#text'][0])?></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
+                            <a  href="#" class="m-menu__link m-menu__toggle">
+                                <span class="m-menu__item-here"></span>
+                                <span class="m-menu__link-text">
+												Top Down
+											</span>
+                                <i class="m-menu__hor-arrow la la-angle-down"></i>
+                                <i class="m-menu__ver-arrow la la-angle-right"></i>
+                            </a>
+                            <div class="m-menu__submenu  m-menu__submenu--fixed-xl m-menu__submenu--center" >
+                                <span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                                <div class="m-menu__subnav">
+                                    <ul class="m-menu__content">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
+                            <a  href="#" class="m-menu__link m-menu__toggle">
+                                <span class="m-menu__item-here"></span>
+                                <span class="m-menu__link-text">
+													Earnings release
 											</span>
                                 <i class="m-menu__hor-arrow la la-angle-down"></i>
                                 <i class="m-menu__ver-arrow la la-angle-right"></i>

@@ -343,7 +343,7 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
                                 </div>
                                 <div class="m-portlet__head-tools">
                                     <ul class="m-portlet__nav">
-                                        <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                        <li class="m-portlet__nav-item m-dropdown m-dropdown--inline  m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
                                             <a href="chart.php?ticket=<?php echo @$ticker?>" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-info m-btn m-btn--label-info">
                                                Chart Table
                                             </a>

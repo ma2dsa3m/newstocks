@@ -117,6 +117,9 @@ $si = file_get_contents("https://finviz.com");
 $sin = new nokogiri($si);
 $signal = ($sin->get('table.t-home-table')->toArray());
 
+#topup
+@$topup = ($sin->get('.t-home-table td')->toArray());
+
 #signal2
 $siq = file_get_contents("https://finviz.com/screener.ashx?v=110&s=ta_p_tlsupport");
 $sinq = new nokogiri($siq);
