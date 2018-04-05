@@ -57,17 +57,50 @@
                             <a  href="#" class="m-menu__link m-menu__toggle">
                                 <span class="m-menu__item-here"></span>
                                 <span class="m-menu__link-text">
-												People
+												New Inside
 											</span>
                                 <i class="m-menu__hor-arrow la la-angle-down"></i>
                                 <i class="m-menu__ver-arrow la la-angle-right"></i>
                             </a>
-                            <div class="m-menu__submenu  m-menu__submenu--fixed m-menu__submenu--left" style="width:600px">
+                            <div class="m-menu__submenu  m-menu__submenu--fixed m-menu__submenu--left" style="width:800px">
                                 <span class="m-menu__arrow m-menu__arrow--adjust"></span>
                                 <div class="m-menu__subnav">
                                     <ul class="m-menu__content">
 
-                                    <?php //var_dump($people)?>
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Ticker</th>
+                                                <th>Latest Insider Trading</th>
+                                                <th>Relationship</th>
+                                                <th>Date</th>
+                                                <th>Transaction</th>
+                                                <th>Cost</th>
+                                                <th>Shares</th>
+                                                <th>Value($)</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$newinside[6]['a'][0]['#text'][0])?>" ><?php var_dump(@$newinside)?></a></th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry</td>
+                                                <td>the Bird</td>
+                                                <td>@twitter</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
 
                                     </ul>
                                 </div>
@@ -327,7 +360,7 @@
                             <a  href="#" class="m-menu__link m-menu__toggle">
                                 <span class="m-menu__item-here"></span>
                                 <span class="m-menu__link-text">
-													Earnings release
+													Earnings Release
 											</span>
                                 <i class="m-menu__hor-arrow la la-angle-down"></i>
                                 <i class="m-menu__ver-arrow la la-angle-right"></i>

@@ -621,6 +621,8 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
 <!--end::Page Vendors -->
 <!--begin::Page Snippets -->
 <script src="../assets/app/js/dashboard.js" type="text/javascript"></script>
+
+<?php require "../controller/analytics.php";?>
 <!--end::Page Snippets -->
 </body>
 <!-- end::Body -->
