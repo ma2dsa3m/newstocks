@@ -332,252 +332,66 @@
                                 <i class="m-menu__hor-arrow la la-angle-down"></i>
                                 <i class="m-menu__ver-arrow la la-angle-right"></i>
                             </a>
-                            <div class="m-menu__submenu  m-menu__submenu--center" style="width: 335px">
+                            <div class="m-menu__submenu  m-menu__submenu--center" style="width: 600px">
                                 <span class="m-menu__arrow m-menu__arrow--adjust"></span>
                                 <div class="m-menu__subnav">
                                     <ul class="m-menu__content">
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Finance Reports
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-map"></i>
-                                                        <span class="m-menu__link-text">
-																		Annual Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-user"></i>
-                                                        <span class="m-menu__link-text">
-																		HR Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-clipboard"></i>
-                                                        <span class="m-menu__link-text">
-																		IPO Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-graphic-1"></i>
-                                                        <span class="m-menu__link-text">
-																		Finance Margins
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-icon flaticon-graphic-2"></i>
-                                                        <span class="m-menu__link-text">
-																		Revenue Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Project Reports
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Coca Cola CRM
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Delta Airlines Booking Site
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Malibu Accounting
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Vineseed Website Rewamp
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Zircon Mobile App
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--line">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Mercury CMS
-																	</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																HR Reports
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Staff Directory
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Client Directory
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Salary Reports
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Staff Payslips
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Corporate Expenses
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-                                                        <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                            <span></span>
-                                                        </i>
-                                                        <span class="m-menu__link-text">
-																		Project Expenses
-																	</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="m-menu__item">
-                                            <h3 class="m-menu__heading m-menu__toggle">
-															<span class="m-menu__link-text">
-																Reporting Apps
-															</span>
-                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                            </h3>
-                                            <ul class="m-menu__inner">
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Report Adjusments
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Sources & Mediums
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Reporting Settings
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Conversions
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Report Flows
-																	</span>
-                                                    </a>
-                                                </li>
-                                                <li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-                                                    <a  href="inner.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Audit & Logs
-																	</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row"><?php echo(@$earningstoday[4]['#text'][0])?></th>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[6]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[6]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[7]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[7]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[8]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[8]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[9]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[9]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[10]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[10]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[11]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[11]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[12]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[12]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[13]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[13]['a'][0]['#text'][0])?></a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><?php echo(@$earningstoday[15]['#text'][0])?></th>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[17]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[17]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[18]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[18]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[19]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[19]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[20]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[20]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[21]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[21]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[22]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[22]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[23]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[23]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[24]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[24]['a'][0]['#text'][0])?></a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><?php echo(@$earningstoday[26]['#text'][0])?></th>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[28]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[28]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[29]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[29]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[30]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[30]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[31]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[31]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[32]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[32]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[33]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[33]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[34]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[34]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[35]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[35]['a'][0]['#text'][0])?></a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><?php echo(@$earningstoday[37]['#text'][0])?></th>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[39]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[39]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[40]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[40]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[41]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[41]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[42]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[42]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[43]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[43]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[44]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[44]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[45]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[45]['a'][0]['#text'][0])?></a></td>
+                                                <td><a href="dash.php?ticket=<?php echo(@$earningstoday[46]['a'][0]['#text'][0])?>"><?php echo(@$earningstoday[46]['a'][0]['#text'][0])?></a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
                                     </ul>
                                 </div>
                             </div>
