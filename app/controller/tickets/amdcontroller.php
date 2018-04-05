@@ -124,7 +124,10 @@ $signal = ($sin->get('table.t-home-table')->toArray());
 @$earningstoday = ($sin->get('.t-home-table > .t-home-table td')->toArray());
 
 #New inside
-@$newinside = ($sin->get('.insider .t-home-table-top > td')->toArray());
+@$newinside = ($sin->get('.insider-buy-row-1 > td')->toArray());
+@$newinside2 = ($sin->get('.insider-buy-row-2 > td')->toArray());
+@$newinsidesell = ($sin->get('.insider-sale-row-1 > td')->toArray());
+@$newinsidesell2 = ($sin->get('.insider-sale-row-2 > td')->toArray());
 
 
 #signal2

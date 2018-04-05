@@ -82,23 +82,66 @@
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$newinside[6]['a'][0]['#text'][0])?>" ><?php var_dump(@$newinside)?></a></th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$newinside[0]['a'][0]['#text'][0])?>" ><?php echo(@$newinside[0]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$newinside[1]['a'][0]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[2]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[3]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[4]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[5]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[6]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[7]['#text'][0])?></td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$newinside[8]['a'][0]['#text'][0])?>" ><?php echo(@$newinside[8]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$newinside[9]['a'][0]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[10]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[11]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[12]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[13]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[14]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[15]['#text'][0])?></td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">3</th>
-                                                <td>Larry</td>
-                                                <td>the Bird</td>
-                                                <td>@twitter</td>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$newinside[16]['a'][0]['#text'][0])?>" ><?php echo(@$newinside[16]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$newinside[17]['a'][0]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[18]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[19]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[20]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[21]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[22]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside[23]['#text'][0])?></td>
                                             </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$newinside2[0]['a'][0]['#text'][0])?>" ><?php echo(@$newinside2[0]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$newinside2[1]['a'][0]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[2]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[3]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[4]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[5]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[6]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[7]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$newinside2[8]['a'][0]['#text'][0])?>" ><?php echo(@$newinside2[8]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$newinside2[9]['a'][0]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[10]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[11]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[12]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[13]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[14]['#text'][0])?></td>
+                                                <td><?php echo(@$newinside2[15]['#text'][0])?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="dash.php?ticket=<?php echo(@$newinsidesell[0]['a'][0]['#text'][0])?>" ><?php echo(@$newinsidesell[0]['a'][0]['#text'][0])?></a></th>
+                                                <td><?php echo(@$newinsidesell[1]['a'][0]['#text'][0])?></td>
+                                                <td><?php echo(@$newinsidesell[2]['#text'][0])?></td>
+                                                <td><?php echo(@$newinsidesell[3]['#text'][0])?></td>
+                                                <td><?php echo(@$newinsidesell[4]['#text'][0])?></td>
+                                                <td><?php echo(@$newinsidesell[5]['#text'][0])?></td>
+                                                <td><?php echo(@$newinsidesell[6]['#text'][0])?></td>
+                                                <td><?php echo(@$newinsidesell[7]['#text'][0])?></td>
+                                            </tr>
+
                                             </tbody>
                                         </table>
 
