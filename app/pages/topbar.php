@@ -48,9 +48,39 @@
                             </a>
                             <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left" style="width:600px">
                                 <span class="m-menu__arrow m-menu__arrow--adjust"></span>
-                                <ul class="m-menu__subnav">
-                                    <?php echo(@$about)?>
-                                </ul>
+
+                                    <div class="m-portlet m-portlet--skin-dark m-portlet--bordered-semi">
+                                        <div class="m-portlet__head">
+                                            <div class="m-portlet__head-caption">
+                                                <div class="m-portlet__head-title">
+						<span class="m-portlet__head-icon">
+							<i class="flaticon-statistics"></i>
+						</span>
+                                                    <h3 class="m-portlet__head-text">
+                                                        <?php echo @$title ?>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="m-portlet__head-tools">
+                                                <ul class="m-portlet__nav">
+                                                    <li class="m-portlet__nav-item">
+                                                        <a href="" class="m-portlet__nav-link m-portlet__nav-link--icon"><i class="la la-cloud-upload"></i></a>
+                                                    </li>
+                                                    <li class="m-portlet__nav-item">
+                                                        <a href="" class="m-portlet__nav-link m-portlet__nav-link--icon"><i class="la la-cog"></i></a>
+                                                    </li>
+                                                    <li class="m-portlet__nav-item">
+                                                        <a href="" class="m-portlet__nav-link m-portlet__nav-link--icon"><i class="la la-share-alt-square"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__body">
+                                            <?php echo(@$about)?>
+                                        </div>
+                                    </div>
+
+
                             </div>
                         </li>
                         <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  data-menu-submenu-toggle="click" data-redirect="true" aria-haspopup="true">
