@@ -128,6 +128,7 @@ $signal = ($sin->get('table.t-home-table')->toArray());
 @$newinside2 = ($sin->get('.insider-buy-row-2 > td')->toArray());
 @$newinsidesell = ($sin->get('.insider-sale-row-1 > td')->toArray());
 @$newinsidesell2 = ($sin->get('.insider-sale-row-2 > td')->toArray());
+@$option = ($sin->get('.insider-option-row > td')->toArray());
 
 
 #signal2
@@ -136,6 +137,7 @@ $sinq = new nokogiri($siq);
 $signalq = ($sinq->get('#screener-content td')->toArray());
 
 //---------------------------------------------------------
+
 
 
 ?>

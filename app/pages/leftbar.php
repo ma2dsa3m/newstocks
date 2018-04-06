@@ -582,7 +582,7 @@
                 <div class="m-menu__submenu ">
                     <span class="m-menu__arrow"></span>
                     <ul class="m-menu__subnav">
-                       /////
+                       <?php var_dump($newsrat);?>
 
                     </ul>
                 </div>
