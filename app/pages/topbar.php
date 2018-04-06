@@ -82,7 +82,7 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                if(null !==(@$newinside[0]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$newinside[5]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinside[0]['a'][0]['#text'][0]),'" >',(@$newinside[0]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinside[1]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$newinside[2]['#text'][0]),'</td>
@@ -95,7 +95,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@$newinside[8]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$newinside[13]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinside[8]['a'][0]['#text'][0]),'" >',(@$newinside[8]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinside[9]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$newinside[10]['#text'][0]),'</td>
@@ -108,7 +108,7 @@
                                                 ';};
                                                 ?>
 
-                                                <?php if(null !==(@$newinside[16]['a'][0]['#text'][0])){echo
+                                                <?php if(null !==(@$newinside[21]['#text'][0])){echo
                                             '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinside[16]['a'][0]['#text'][0]),'" >',(@$newinside[16]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinside[17]['a'][0]['#text'][0]),'</td>
@@ -133,7 +133,7 @@
                                                 <td>',(@$newinside2[7]['#text'][0]),'</td>
                                             </tr>';};?>
 
-                                              <?php  if(null !==(@$newinside2[8]['a'][0]['#text'][0])){echo
+                                              <?php  if(null !==(@$newinside2[13]['#text'][0])){echo
                                             '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinside2[8]['a'][0]['#text'][0]),'" >',(@$newinside2[8]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinside2[9]['a'][0]['#text'][0]),'</td>
@@ -146,7 +146,7 @@
                                             </tr>';};?>
 
                                                 <?php
-                                                if(null !==(@$newinsidesell[0]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$newinsidesell[5]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinsidesell[0]['a'][0]['#text'][0]),'" >',(@$newinsidesell[0]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinsidesell[1]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$newinsidesell[2]['#text'][0]),'</td>
@@ -159,7 +159,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@$newinsidesell[8]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$newinsidesell[13]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinsidesell[8]['a'][0]['#text'][0]),'" >',(@$newinsidesell[8]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinsidesell[9]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$newinsidesell[10]['#text'][0]),'</td>
@@ -172,7 +172,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@$newinsidesell2[0]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$newinsidesell2[5]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinsidesell2[0]['a'][0]['#text'][0]),'" >',(@$newinsidesell2[0]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinsidesell2[1]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$newinsidesell2[2]['#text'][0]),'</td>
@@ -185,7 +185,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@$newinsidesell2[8]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$newinsidesell2[13]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinsidesell2[8]['a'][0]['#text'][0]),'" >',(@$newinsidesell2[8]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinsidesell2[9]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$newinsidesell2[10]['#text'][0]),'</td>
@@ -211,7 +211,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@option[0]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@option[5]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$option[0]['a'][0]['#text'][0]),'" >',(@$option[0]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$option[1]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$option[2]['#text'][0]),'</td>
@@ -224,7 +224,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@$option[8]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$option[13]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$option[8]['a'][0]['#text'][0]),'" >',(@$option[8]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$option[9]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$option[10]['#text'][0]),'</td>
@@ -237,7 +237,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@$option[16]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$option[21]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$option[16]['a'][0]['#text'][0]),'" >',(@$option[16]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$option[17]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$option[18]['#text'][0]),'</td>
@@ -999,10 +999,10 @@
                                     <div class="m-dropdown__inner">
                                         <div class="m-dropdown__header m--align-center">
 														<span class="m-dropdown__header-title">
-															Quick Actions
+															Investitions
 														</span>
                                             <span class="m-dropdown__header-subtitle">
-															Shortcuts
+															Look for your Deal
 														</span>
                                         </div>
                                         <div class="m-dropdown__body m-dropdown__body--paddingless">
@@ -1013,13 +1013,13 @@
                                                             <a href="#" class="m-nav-grid__item">
                                                                 <i class="m-nav-grid__icon flaticon-file"></i>
                                                                 <span class="m-nav-grid__text">
-																				Generate Report
+																				Free Fund
 																			</span>
                                                             </a>
                                                             <a href="#" class="m-nav-grid__item">
                                                                 <i class="m-nav-grid__icon flaticon-time"></i>
                                                                 <span class="m-nav-grid__text">
-																				Add New Event
+																				Free Adviser
 																			</span>
                                                             </a>
                                                         </div>
