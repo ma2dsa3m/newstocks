@@ -280,7 +280,7 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
                                             Investor Sentiment
                                         </h3>
                                         <span class="m-widget14__desc">
-													Total Rating
+													Investor Sentiment Rating.
 												</span>
                                     </div>
                                     <div class="row  align-items-center">
@@ -289,8 +289,8 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
                                                 <div class="m-widget14__stat">
                                                     <?php if (@$recomend == "-") {
                                                                            echo "n/a";
-                                                                        }elseif(@$recomend<2.2){echo "Buy";} 
-                                                                elseif (@$recomend>=2.2 && @$recomend<=3) {
+                                                                        }elseif(@$recomend<2){echo "Buy";}
+                                                                elseif (@$recomend>=2 && @$recomend<=3) {
                                                                 echo "Hold";
                                                                 } elseif (@$recomend>3 && @$recomend<=5) {
                                                                           echo "Sell";
