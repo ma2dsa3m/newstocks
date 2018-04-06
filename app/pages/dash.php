@@ -94,12 +94,15 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
                                                 <h5>
 												(<?php echo @$change ?>)
                                                 </h5>
+
 											</span>
                                 </a>
+
                             </li>
                         </ul>
                     </div>
                     <div>
+
 								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker"><?php echo @$compprof?>
 									<span class="m-subheader__daterange-label">
 										<span class="m-subheader__daterange-title"></span>
@@ -109,6 +112,9 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
 										<i class="la la-angle-down"></i>
 									</a>
 								</span>
+                        <button type="button" class="btn m-btn--square  m-btn m-btn--gradient-from-brand m-btn--gradient-to-info">
+                            Add to Watchlist
+                        </button>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@
 			"file": "app/controller/tickets/amdcontroller.php",
 			"settings":
 			{
-				"buffer_size": 2853,
+				"buffer_size": 3359,
 				"line_ending": "Unix"
 			}
 		},
@@ -47,7 +47,7 @@
 			"file": "app/pages/dash.php",
 			"settings":
 			{
-				"buffer_size": 30509,
+				"buffer_size": 30549,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -65,7 +65,7 @@
 			"file": "app/assets/landing/register.php",
 			"settings":
 			{
-				"buffer_size": 13813,
+				"buffer_size": 13920,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -83,7 +83,7 @@
 			"file": "app/pages/topbar.php",
 			"settings":
 			{
-				"buffer_size": 63248,
+				"buffer_size": 92466,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -132,6 +132,7 @@
 	],
 	"file_history":
 	[
+		"/private/var/folders/zw/gzmccl8x26b7wsd8dk3b03y00000gn/T/fz3temp-2/config.php",
 		"/private/var/folders/zw/gzmccl8x26b7wsd8dk3b03y00000gn/T/fz3temp-2/db.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/pages/login.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/stocks/app/pages/dash.php",
@@ -185,15 +186,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2853,
+						"buffer_size": 3359,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								823,
-								823
+								0,
+								0
 							]
 						],
 						"settings":
@@ -269,7 +270,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 30509,
+						"buffer_size": 30549,
 						"regions":
 						{
 						},
@@ -329,15 +330,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13813,
+						"buffer_size": 13920,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2163,
-								2163
+								0,
+								0
 							]
 						],
 						"settings":
@@ -346,7 +347,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 8155.0,
+						"translation.y": 1777.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -388,7 +389,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 63248,
+						"buffer_size": 92466,
 						"regions":
 						{
 						},

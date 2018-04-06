@@ -133,7 +133,7 @@
                                                 <td>',(@$newinside2[7]['#text'][0]),'</td>
                                             </tr>';};?>
 
-                                              <?php  if(null !==(@$newinside2[13]['#text'][0])){echo
+                                              <?php  if(null !==(@$newinside2[11]['#text'][0])){echo
                                             '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinside2[8]['a'][0]['#text'][0]),'" >',(@$newinside2[8]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinside2[9]['a'][0]['#text'][0]),'</td>
@@ -198,7 +198,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@$newinsidesell2[16]['a'][0]['#text'][0])){echo '<tr>
+                                                if(null !==(@$newinsidesell2[21]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinsidesell2[16]['a'][0]['#text'][0]),'" >',(@$newinsidesell2[16]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinsidesell2[17]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$newinsidesell2[18]['#text'][0]),'</td>
