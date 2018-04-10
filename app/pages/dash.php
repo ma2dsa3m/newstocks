@@ -112,9 +112,81 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
 										<i class="la la-angle-down"></i>
 									</a>
 								</span>
-                        <button type="button" class="btn m-btn--square  m-btn m-btn--gradient-from-brand m-btn--gradient-to-info">
-                            Add to Watchlist
-                        </button>
+                        <button type="button" class="btn m-btn m-btn--gradient-from-info m-btn--gradient-to-accent" data-toggle="modal" data-target="#m_modal_6">
+                                                Add to Watchlist
+                                            </button>
+                                            <form action="../controller/tickets/watchlist.php" method="post">
+                                            <div class="modal fade" id="m_modal_6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">
+                                           Add To Watchlist  <?php echo @$title?>
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">
+                                                &times;
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <p>
+                                           <h3> Select Qty Shares</h3> <br>
+                                            
+                                            <input type="number" class="form-control m-input m-input--pill m-input--air" name="qtyshares" placeholder="Qty Shares">
+                                            <br>
+                                            <br>
+                                            <h3>Select Watchlist Name </h3> <br>
+                                            
+                                            <select class="form-control m-input" name="watchlist2">
+                                                
+                                                <?php 
+                                                
+                                                    $ref = R::findAll('watchlist','userid = ?',array($userid));
+                                                    if($ref){
+                                                    $co = $ref->watchlistname;
+
+
+
+                                                    };
+                                                    
+                                                foreach($co as $list){
+                                                    
+                                                    echo '<option value="',$list,'">
+                                                         ',$list,'
+                                                          </option>';
+
+
+                                                };?>
+                                                
+                                                
+                                            </select>
+                                            <br>
+
+                                            <h3> New Watchlist</h3> <br>
+                                            
+                                            <input type="text" class="form-control m-input m-input--pill m-input--air" name="watchlist1">
+                                            <br>
+
+                                            <input type="text" name="ticker" hidden="" value="<?php echo @$ticker?>">
+                                            <input type="text" name="title" hidden="" value="<?php echo @$title?>">
+                                            <input type="text" name="price" hidden="" value="<?php echo @$price?>">
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                            Close
+                                        </button>
+                                        <button type="submit" name="addwatch" class="btn btn-primary">
+                                            Add to Watchlist
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                     </div>
                 </div>
             </div>

@@ -95,6 +95,7 @@
                             <div class="m-menu__submenu  m-menu__submenu--fixed m-menu__submenu--left" style="width:800px">
                                 <span class="m-menu__arrow m-menu__arrow--adjust"></span>
                                 <div class="m-menu__subnav">
+                                    
                                     <ul class="m-menu__content">
 
                                         <table class="table">
@@ -215,7 +216,7 @@
                                                 ?>
 
                                                 <?php
-                                                if(null !==(@$newinsidesell2[13]['#text'][0])){echo '<tr>
+                                                if(null !==(@$newinsidesell2[11]['#text'][0])){echo '<tr>
                                                 <th scope="row"><a href="dash.php?ticket=',(@$newinsidesell2[8]['a'][0]['#text'][0]),'" >',(@$newinsidesell2[8]['a'][0]['#text'][0]),'</a></th>
                                                 <td>',(@$newinsidesell2[9]['a'][0]['#text'][0]),'</td>
                                                 <td>',(@$newinsidesell2[10]['#text'][0]),'</td>

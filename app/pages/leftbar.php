@@ -526,7 +526,7 @@
 									</span>
                     <i class="m-menu__ver-arrow la la-angle-right"></i>
                 </a>
-                <div class="m-menu__submenu ">
+                <div class="m-menu__submenu "  style="width: 400px;height: 400px">
                     <span class="m-menu__arrow"></span>
                     <ul class="m-menu__subnav">
                         <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true"  data-redirect="true">
@@ -536,38 +536,8 @@
 												</span>
 											</span>
                         </li>
-                        <li class="m-menu__item " aria-haspopup="true"  data-redirect="true">
-                            <a  href="inner.html" class="m-menu__link ">
-                                <i class="m-menu__link-icon la la-commenting"></i>
-                                <span class="m-menu__link-text">
-													Post
-												</span>
-                            </a>
-                        </li>
-                        <li class="m-menu__item " aria-haspopup="true"  data-redirect="true">
-                            <a  href="inner.html" class="m-menu__link ">
-                                <i class="m-menu__link-icon la la-user"></i>
-                                <span class="m-menu__link-text">
-													Member
-												</span>
-                            </a>
-                        </li>
-                        <li class="m-menu__item " aria-haspopup="true"  data-redirect="true">
-                            <a  href="inner.html" class="m-menu__link ">
-                                <i class="m-menu__link-icon la la-cart-arrow-down"></i>
-                                <span class="m-menu__link-text">
-													Order
-												</span>
-                            </a>
-                        </li>
-                        <li class="m-menu__item " aria-haspopup="true"  data-redirect="true">
-                            <a  href="inner.html" class="m-menu__link ">
-                                <i class="m-menu__link-icon la la-coffee"></i>
-                                <span class="m-menu__link-text">
-													Entry
-												</span>
-                            </a>
-                        </li>
+                        
+                        
                     </ul>
                 </div>
             </li>

@@ -16,7 +16,7 @@
             </li>
             <li class="nav-item m-tabs__item">
                 <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_quick_sidebar_tabs_logs" role="tab">
-                    Technical Analisis
+                    Watchlist
                 </a>
             </li>
         </ul>
@@ -342,13 +342,40 @@
             </div>
 
             <div class="tab-pane  m-scrollable" id="m_quick_sidebar_tabs_logs" role="tabpanel">
-                <div id="stocktwits-widget-news"></div><a href='https://stocktwits.com' style='font-size: 0px;'>StockTwits</a>
-                <script type="text/javascript" src="https://api.stocktwits.com/addon/widget/2/widget-loader.min.js"></script>
-                <script type="text/javascript">
-                    STWT.Widget({container: 'stocktwits-widget-news', symbol: 'AAPL', width: '300', height: '300', limit: '15', scrollbars: 'true', streaming: 'true', title: 'AAPL Ideas', style: {link_color: '4871a8', link_hover_color: '4871a8', header_text_color: '000000', border_color: 'cecece', divider_color: 'cecece', divider_color: 'cecece', divider_type: 'solid', box_color: 'f5f5f5', stream_color: 'ffffff', text_color: '000000', time_color: '999999'}});
-                </script>
 
+<form action="../controller/dashcontroller.php" method="post"> 
 
+                
+
+            <?php 
+            
+                
+            
+            foreach($watchlist as $list){
+                
+                    echo '<table class="table">
+
+       <input type="text" name="tic" value="',$list->ticker,'" hidden>
+
+  <tbody>
+    <tr>
+      <th scope="row"><a href="dash.php?ticket=',$list->ticker,'">',$list->ticker,'</a></th>
+      <td>',$list->pricestart,'</td>
+    
+      <td>',$list->companyname,'</td>
+      <td>',$list->qtyshares,'</td>
+      <td><button type="success" name="deltic" class="btn m-btn--pill m-btn--air m-btn m-btn--gradient-from-danger m-btn--gradient-to-warning">x</button></td>
+    </tr>
+    
+  </tbody>
+  
+</table>';
+
+            };?>
+            
+<button type="success" name="deltic" class="btn m-btn--pill m-btn--air m-btn m-btn--gradient-from-danger m-btn--gradient-to-warning">Delete</button>
+               
+</form>
             </div>
 
         </div>
