@@ -381,19 +381,19 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
                                                 <div class="m-widget14__legend">
                                                     <span class="m-widget14__legend-bullet m--bg-accent"></span>
                                                     <span class="m-widget14__legend-text">
-																<?php echo @$inmonth?>Month
+																<?php echo @$inmonth?>  Month
 															</span>
                                                 </div>
                                                 <div class="m-widget14__legend">
                                                     <span class="m-widget14__legend-bullet m--bg-warning"></span>
                                                     <span class="m-widget14__legend-text">
-																<?php echo @$inquarter?>3 Month
+																<?php echo @$inquarter?>  3 Month
 															</span>
                                                 </div>
                                                 <div class="m-widget14__legend">
                                                     <span class="m-widget14__legend-bullet m--bg-brand"></span>
                                                     <span class="m-widget14__legend-text">
-																<?php echo @$inyear?>Year
+																<?php echo @$inyear?>  Year
 															</span>
                                                 </div>
                                             </div>
