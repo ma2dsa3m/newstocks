@@ -8,11 +8,19 @@ $qtyshares = $data['qtyshares'];
 
 if(($data['watchlist1'])!=""){$watchlistname = $data['watchlist1'];} else $watchlistname = $data['watchlist2'];
 $alllist = R::count('watchlist','watchlistname = ?',array($data['watchlist1']));
-
+$alllistw = R::count('watchlistname','watchlistname = ?',array($data['watchlist1']));
 
 $ticker = $data['ticker'];
 $title = $data['title'];
 $price = $data['price'];
+
+#create new watch
+if(isset($data['addwatch']) && $alllistw<1 && ($data['watchlist1'])!=""){
+    $createwatchlistname = R::dispense('watchlistname');
+    $createwatchlistname->userid=$userid;
+    $createwatchlistname -> watchlistname = $data['watchlist1'];
+    R::store($createwatchlistname);
+};
 
 #addtickets to watch
 if(isset($data['addwatch']) && $alllist<1){

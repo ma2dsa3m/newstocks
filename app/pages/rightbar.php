@@ -5,7 +5,7 @@
 				</span>
         <ul id="m_quick_sidebar_tabs" class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--brand" role="tablist">
             <li class="nav-item m-tabs__item">
-                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_quick_sidebar_tabs_messenger" role="tab">
+                <a class="nav-link m-tabs__link " data-toggle="tab" href="#m_quick_sidebar_tabs_messenger" role="tab">
                     Messages
                 </a>
             </li>
@@ -15,13 +15,13 @@
                 </a>
             </li>
             <li class="nav-item m-tabs__item">
-                <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_quick_sidebar_tabs_logs" role="tab">
+                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_quick_sidebar_tabs_logs" role="tab">
                     Watchlist
                 </a>
             </li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane active m-scrollable" id="m_quick_sidebar_tabs_messenger" role="tabpanel">
+            <div class="tab-pane m-scrollable" id="m_quick_sidebar_tabs_messenger" role="tabpanel">
                 <div class="m-messenger m-messenger--message-arrow m-messenger--skin-light">
                     <div class="m-messenger__messages">
                         <div class="m-messenger__wrapper">
@@ -341,22 +341,36 @@
                 </div>
             </div>
 
-            <div class="tab-pane  m-scrollable" id="m_quick_sidebar_tabs_logs" role="tabpanel">
+            <div class="tab-pane active m-scrollable" id="m_quick_sidebar_tabs_logs" role="tabpanel">
 
-<form action="../controller/dashcontroller.php" method="post"> 
+
 
                 
 
-            <?php 
-            
-                
-            
-            foreach($watchlist as $list){
-                
-                    echo '<table class="table">
+            <?php
 
-       <input type="text" name="tic" value="',$list->ticker,'" hidden>
 
+            foreach ($watchlistname as $name){
+
+                $newname = $name->watchlistname;
+                @$watchlist = R::findAll('watchlist','watchlistname = ?',array($newname));
+
+
+                    echo '
+
+<div class="m-portlet__head-title">
+						<h3 class="m-portlet__head-text">
+							',$name->watchlistname,'
+						</h3>
+					</div>
+';
+
+                    foreach($watchlist as $list){
+                    $tic = $list->id;
+                        echo '<table class="table m-table m-table--head-bg-brand">
+<form action="../controller/dashcontroller.php?tic=',$tic,'" method="POST">
+
+      
   <tbody>
     <tr>
       <th scope="row"><a href="dash.php?ticket=',$list->ticker,'">',$list->ticker,'</a></th>
@@ -364,18 +378,29 @@
     
       <td>',$list->companyname,'</td>
       <td>',$list->qtyshares,'</td>
-      <td><button type="success" name="deltic" class="btn m-btn--pill m-btn--air m-btn m-btn--gradient-from-danger m-btn--gradient-to-warning">x</button></td>
+      <td><button type="success" name="deltic" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="Delete">
+      <i class="la la-trash"></i></button></td>
+      
+      
     </tr>
     
   </tbody>
-  
+  </form>
 </table>';
 
-            };?>
+
+                    };
+
+            };
+
+
+
+
+           ?>
             
-<button type="success" name="deltic" class="btn m-btn--pill m-btn--air m-btn m-btn--gradient-from-danger m-btn--gradient-to-warning">Delete</button>
-               
-</form>
+
+
+
             </div>
 
         </div>

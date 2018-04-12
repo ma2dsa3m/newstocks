@@ -143,18 +143,13 @@ if (!isset($_SESSION['logged user'])){header('Location:../assets/landing/login.p
                                                 
                                                 <?php 
                                                 
-                                                    $ref = R::findAll('watchlist','userid = ?',array($userid));
-                                                    if($ref){
-                                                    $co = $ref->watchlistname;
+                                                    $ref = R::findAll('watchlistname','userid = ?',array($userid));
 
 
-
-                                                    };
+                                                foreach($ref as $list){
                                                     
-                                                foreach($co as $list){
-                                                    
-                                                    echo '<option value="',$list,'">
-                                                         ',$list,'
+                                                    echo '<option value="',$list->watchlistname,'">
+                                                         ',$list->watchlistname,'
                                                           </option>';
 
 
